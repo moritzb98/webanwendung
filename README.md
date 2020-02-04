@@ -1,1 +1,1 @@
-Webanwendung von Jana Ballweg, Lea Deppisch, Fabienne Burger, Theresa Brenner und Moritz Banhardt
+Webanwendung von Jana Ballweg, Lea Deppisch, Fabienne Burgert, Theresa Brenner und Moritz Banhardt
