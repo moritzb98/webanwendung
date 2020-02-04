@@ -1,1 +1,1 @@
-webanwendung
+Webanwendung von Jana Ballweg, Lea Deppisch, Fabienne Burger, Theresa Brenner und Moritz Banhardt
