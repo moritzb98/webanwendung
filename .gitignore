@@ -4,3 +4,5 @@ webapp/docker/db/ib_logfile0
 webapp/docker/db/ibdata1
 
 webapp/docker/db/ibtmp1
+
+webapp/docker/db/ib_buffer_pool
