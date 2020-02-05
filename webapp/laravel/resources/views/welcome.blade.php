@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   Hallo Moritz
+                   Veranstaltungsmanager
                 </div>
 
                 <div class="links">
