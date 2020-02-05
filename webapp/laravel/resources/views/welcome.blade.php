@@ -81,7 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
+<<<<<<< Updated upstream
                    Veranstaltungsmanager
+=======
+                    Laravel
+>>>>>>> Stashed changes
                 </div>
 
                 <div class="links">
