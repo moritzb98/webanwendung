@@ -13,17 +13,17 @@ import { catchError, map } from 'rxjs/operators';
 export class HomeService {
   data: any;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
   }
 
-  getUsers(): Observable<any>{
+  getUsers(): Observable<any> {
     return this.http.get('http://localhost/api/users').pipe(
       map(this.extractData)
     );
   }
-  
+
   private extractData(res: Response) {
-    let body = res;
+    const body = res;
     return body || {};
   }
 
