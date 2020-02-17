@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HomeService } from './home.service';
 import { StartseiteComponent } from './startseite/startseite.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     StartseiteComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
