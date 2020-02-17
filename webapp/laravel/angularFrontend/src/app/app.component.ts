@@ -8,4 +8,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 })
 export class AppComponent {
   title = 'Veranstaltungsmanager';
+  loading = true;
+
+  ngOnInit() {
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        this.loading = false;
+      }
+    };
+  }
+
 }

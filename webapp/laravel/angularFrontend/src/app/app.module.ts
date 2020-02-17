@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfilComponent } from './profil/profil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
+    MatInputModule,
   ],
   providers: [HomeService],
   bootstrap: [AppComponent]
