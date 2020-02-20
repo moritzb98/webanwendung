@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { RegisterComponent } from './register/register.component';
+import { AuthService } from './Services/auth.service';
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { RegisterComponent } from './register/register.component';
     MatInputModule,
     FormsModule,
   ],
-  providers: [HomeService],
+  providers: [HomeService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
