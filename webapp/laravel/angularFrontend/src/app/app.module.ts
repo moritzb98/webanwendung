@@ -15,6 +15,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MatInputModule } from '@angular/material/input';
     NavbarComponent,
     LoginComponent,
     ProfilComponent,
+    RegisterComponent,
   ],
   imports: [
     LayoutModule,
