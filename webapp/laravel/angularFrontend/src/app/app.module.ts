@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpResponse } from '@angular/common/http';
@@ -13,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { ProfilComponent } from './profil/profil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -23,6 +26,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     NavbarComponent,
     LoginComponent,
     ProfilComponent,
+    RegisterComponent,
   ],
   imports: [
     LayoutModule,
@@ -31,6 +35,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
+    MatInputModule,
+    FormsModule,
   ],
   providers: [HomeService],
   bootstrap: [AppComponent]

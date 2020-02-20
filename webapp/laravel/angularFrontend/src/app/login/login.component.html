@@ -1,4 +1,20 @@
-<p>Login war erfolgreich!</p>
-<h1> Hello </h1>
-
-<img src = "../../assets/img/Logo.png">
+<form #loginForm=ngForm (ngSubmit)="onSubmit()">
+    <div class="alert alert-danger" [hidden]="!error">{{ error }}</div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" name="email" class="form-control" id="inputEmail" [(ngModel)]="form.email" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" name="password" class="form-control" id="inputPassword" [(ngModel)]="form.password" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Sign in</button>
+      </div>
+    </div>
+  </form>

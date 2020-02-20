@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { join } from 'path';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   public form = {
     email: null,
+    name: null,
     password: null,
+    password_confirmation: null
   };
-
-  public error = null;
+  public error = [];
 
   constructor(private http: HttpClient) { }
 
@@ -22,13 +22,14 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    return this.http.post('http://localhost/api/login', this.form).subscribe(
+    return this.http.post('http://localhost/api/register', this.form).subscribe(
       data => console.log(data),
       error => this.handleError(error)
     );
   }
 
   handleError(error) {
-    this.error = error.error.error;
+    this.error = error.error.errors;
   }
+
 }
