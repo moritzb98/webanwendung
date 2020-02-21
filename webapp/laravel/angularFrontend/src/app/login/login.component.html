@@ -3,14 +3,15 @@
   <style>
 
     h1 { font-size: 24px; 
-          font-family: Futura, bold;}
-    p  { font-size: 1.2em; }
-    a  { font-size: 0.7cm; }
-  
+          font-family: Futura, bold;
+          color: black;}
+    h2 { font-size: 18px;
+         font-family: Futura, light;
+         color: blue;}
+
   </style>
-
-
-  <h1> Jetzt einloggen!</h1>
+  <h1> Jetzt einloggen und starten!</h1>
+  <h2> Events in Gruppen planen und dabei einen guten Überblick behalten! </h2>
     <div class="alert alert-danger" [hidden]="!error">{{ error }}</div>
     <div class="form-group row">
       <div class="col-sm-10">
@@ -25,12 +26,12 @@
     <div class="form-group row">
       <div class="col-sm-10">
         <mat-label>Passwort eingeben</mat-label>
-        <input matInput placeholder="password" value="" type="password" name="password" class="form-control" id="inputPassword" [(ngModel)]="form.password" required>
+        <input matInput placeholder="Password" value="" type="password" name="Password" class="form-control" id="inputPassword" [(ngModel)]="form.password" required>
       </div>
     </div>
     <div class="form-group row">
       <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Sign in</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
       </div>
     </div>
   </form>
