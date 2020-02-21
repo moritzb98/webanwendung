@@ -1,6 +1,9 @@
+import { CheckAuthService } from './../Services/check-auth.service';
+import { AuthService } from './../Services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { join } from 'path';
-import { HttpClient } from '@angular/common/http';
+import { AuthTokenService } from '../Services/auth-token.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,16 +19,25 @@ export class LoginComponent implements OnInit {
 
   public error = null;
 
-  constructor(private http: HttpClient) { }
+  constructor(private auth: AuthService,
+              private token: AuthTokenService,
+              private router: Router,
+              private checkAuth: CheckAuthService) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    return this.http.post('http://localhost/api/login', this.form).subscribe(
-      data => console.log(data),
+    this.auth.login(this.form).subscribe(
+      data => this.handleResponse(data),
       error => this.handleError(error)
     );
+  }
+
+  handleResponse(data) {
+    this.token.handle(data.access_token);
+    this.checkAuth.changeAuthStatus(true);
+    this.router.navigateByUrl('/start');
   }
 
   handleError(error) {

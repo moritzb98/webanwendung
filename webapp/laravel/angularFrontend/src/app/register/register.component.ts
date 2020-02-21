@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../Services/auth.service';
+import { AuthTokenService } from '../Services/auth-token.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -16,16 +19,21 @@ export class RegisterComponent implements OnInit {
   };
   public error = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private auth: AuthService, private token: AuthTokenService, private router: Router) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    return this.http.post('http://localhost/api/register', this.form).subscribe(
-      data => console.log(data),
+    this.auth.register(this.form).subscribe(
+      data => this.handleResponse(data),
       error => this.handleError(error)
     );
+  }
+
+  handleResponse(data) {
+    this.token.handle(data.access_token);
+    this.router.navigateByUrl('/start');
   }
 
   handleError(error) {
