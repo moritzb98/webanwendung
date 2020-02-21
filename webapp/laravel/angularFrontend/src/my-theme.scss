@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$eventmanager-primary: mat-palette($mat-grey, 300);
+$eventmanager-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+$eventmanager-warn:    mat-palette($mat-red);
+
+$eventmanager-theme: mat-dark-theme($eventmanager-primary, $eventmanager-accent, $eventmanager-warn);
+
+@include angular-material-theme($eventmanager-theme);

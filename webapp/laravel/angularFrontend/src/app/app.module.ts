@@ -14,9 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { ProfilComponent } from './profil/profil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatInputModule } from '@angular/material/input';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './Services/auth.service';
+import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 
 @NgModule({
