@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 /*@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";*/
 @import "~bootstrap/dist/css/bootstrap.css";
+@use "@material/button/mdc-button";
+
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #262625}
+body { margin: 0; font-family: Oswald, "Helvetica Neue", sans-serif !important; background: #262625}
 
 h1,
   h2,
@@ -12,6 +14,7 @@ h1,
   h5,
   h6 {
     color: #F5F0ED;
+    font-family: Oswald;
   }
 
   p {
@@ -20,4 +23,12 @@ h1,
 
   input {
        color: #F5F0ED !important;
+  }
+
+  .beige {
+    background-color: #B7A58A !important;
+  }
+
+  button .beige {
+    color: #F5F0ED;
   }
