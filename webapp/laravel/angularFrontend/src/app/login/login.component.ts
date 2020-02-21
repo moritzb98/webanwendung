@@ -1,7 +1,6 @@
 import { CheckAuthService } from './../Services/check-auth.service';
 import { AuthService } from './../Services/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { join } from 'path';
 import { AuthTokenService } from '../Services/auth-token.service';
 import { Router } from '@angular/router';
 
