@@ -17,7 +17,7 @@ h1,
     font-family: Oswald;
   }
 
-  p {
+  p, span {
     color: #F5F0ED;
   }
 
@@ -29,6 +29,28 @@ h1,
     background-color: #B7A58A !important;
   }
 
-  button .beige {
-    color: #F5F0ED;
+  .beigeInput {
+    color: #F5F0ED !important;
+    font-family: Oswald, "Helvetica Neue", sans-serif !important;
+    font-weight: 700;
+  }
+
+  .dark {
+    border-color: #F5F0ED !important;
+  }
+
+  .darkInput {
+    color: #B7A58A !important;
+    font-family: Oswald, "Helvetica Neue", sans-serif !important;
+    font-weight: 700;
+  }
+
+  .light {
+    background-color: #F5F0ED!important;
+  }
+
+  .lightInput {
+    color: #B7A58A !important;
+    font-family: Oswald, "Helvetica Neue", sans-serif !important;
+    font-weight: 700;
   }

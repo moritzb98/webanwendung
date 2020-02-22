@@ -17,6 +17,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './Services/auth.service';
 import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { StyleguideComponent } from './styleguide/styleguide.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/ma
     LoginComponent,
     ProfilComponent,
     RegisterComponent,
+    StyleguideComponent,
   ],
   imports: [
     LayoutModule,
