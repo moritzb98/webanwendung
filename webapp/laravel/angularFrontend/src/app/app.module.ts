@@ -23,7 +23,6 @@ import { StyleguideComponent } from './styleguide/styleguide.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     StartseiteComponent,
     NavbarComponent,
     LoginComponent,
