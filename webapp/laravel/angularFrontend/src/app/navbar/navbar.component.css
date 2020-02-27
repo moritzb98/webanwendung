@@ -3,8 +3,17 @@
   }
 
   .toolbar {
-    height: auto;
+    height: 7em;
     margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #262625;
+    color: white;
+    font-family: Oswald, "Helvetica Neue", sans-serif;
+  }
+
+  .toolbarAuth {
+    height: auto;
     display: flex;
     align-items: center;
     background-color: #262625;
@@ -19,3 +28,4 @@
   .navBeforeLogin {
     margin-top: 2em !important;
   }
+
