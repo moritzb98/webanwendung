@@ -1,32 +1,40 @@
-<form #loginForm=ngForm (ngSubmit)="onSubmit()">
-  <img src="../../assets/img/Logo_WA.png" alt="Eventmanager_Logo">
-  <h1> Jetzt einloggen!</h1>
-    <div class="alert alert-danger" [hidden]="!error">{{ error }}</div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
-            <mat-label>Emailadresse</mat-label>
-            <input matInput placeholder="example@example.de" value="" type="email" name="email" id="inputEmail" [(ngModel)]="form.email" required>
-          </mat-form-field>
+<div class="container" style="margin-top: 6em">
+  <div class="row">
+    <div class="col-6">
+      <img class="loginScreen" src="../../assets/img/loginScreen.jpg" alt="People">
+    </div>
+    <div class="col-6">
+      <form class="loginForm" #loginForm=ngForm (ngSubmit)="onSubmit()">
+        <h1 style="text-align: center; margin-bottom: 1em;" >Jetzt einloggen!</h1>
+          <div class="alert alert-danger" [hidden]="!error">{{ error }}</div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Emailadresse</mat-label>
+                  <input matInput placeholder="example@example.de" value="" type="email" name="email" id="inputEmail" [(ngModel)]="form.email" required>
+                </mat-form-field>
+              </form>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <form class="example-form">
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Passwort eingeben</mat-label>
+                    <input matInput placeholder="Passwort" value="" type="password" name="password" id="inputPassword" [(ngModel)]="form.password" required>
+                  </mat-form-field>
+                </form>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <button style="width: 100%;" type="submit" [disabled]="!loginForm.valid" class="mdc-button mdc-button--raised beige">
+                <span class="mdc-button__label beigeInput" >Login</span>
+              </button>
+            </div>
+          </div>
         </form>
-      </div>
     </div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <form class="example-form">
-            <mat-form-field class="example-full-width">
-              <mat-label>Passwort eingeben</mat-label>
-              <input matInput placeholder="Passwort" value="" type="password" name="password" id="inputPassword" [(ngModel)]="form.password" required>
-            </mat-form-field>
-          </form>
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="submit" [disabled]="!loginForm.valid" class="mdc-button mdc-button--raised beige">
-          <span class="mdc-button__label beigeInput">Login</span>
-        </button>
-      </div>
-    </div>
-  </form>
+  </div>
+</div>
