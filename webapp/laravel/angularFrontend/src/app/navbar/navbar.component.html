@@ -15,7 +15,8 @@
         <a class="navbar-brand" >INSPO</a>
         <a class="navbar-brand" >KONTAKTLISTE</a>  
   </div>
+    <img *ngIf="!loggedIn" style="height: 100%; margin-left: 2em; margin-top: 3em;" class="logo" src="../../assets/img/Logo_WA.png"/> 
     <div *ngIf="!loggedIn" class="spacer"></div>
-    <a class="navbar-brand navBeforeLogin" style="margin-right: 1.5em" routerLink="login" *ngIf="!loggedIn">LOGIN</a>
-    <a class="navbar-brand navBeforeLogin" style="margin-right: 1.5em" routerLink="register" *ngIf="!loggedIn">REGISTRIEREN</a>
+    <a *ngIf="!loggedIn" class="navbar-brand navBeforeLogin" style="margin-right: 1.5em" routerLink="login" >LOGIN</a>
+    <a *ngIf="!loggedIn" class="navbar-brand navBeforeLogin" style="margin-right: 1.5em" routerLink="register">REGISTRIEREN</a>
 </div>
