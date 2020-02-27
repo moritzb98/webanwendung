@@ -1,4 +1,5 @@
 <div class="container" style="margin-top: 6em">
+  <div class="alert alert-danger" style="text-align: center;" [hidden]="!error">{{ error }}</div>
   <div class="row">
     <div class="col-6">
       <img class="loginScreen" src="../../assets/img/loginScreen.jpg" alt="People">
@@ -6,7 +7,6 @@
     <div class="col-6">
       <form class="loginForm" #loginForm=ngForm (ngSubmit)="onSubmit()">
         <h1 style="text-align: center; margin-bottom: 1em;" >Jetzt einloggen!</h1>
-          <div class="alert alert-danger" [hidden]="!error">{{ error }}</div>
           <div class="form-group row">
             <div class="col-sm-12">
               <form class="example-form">
