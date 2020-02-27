@@ -14,10 +14,14 @@ h1,
   h5,
   h6 {
     color: #F5F0ED;
-    font-family: Oswald;
+    font-family: Oswald, "Helvetica Neue", sans-serif;
   }
 
   p, span {
+    color: #F5F0ED;
+  }
+
+  a {
     color: #F5F0ED;
   }
 
