@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { HomeService } from '../home.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-styleguide',
+  templateUrl: './styleguide.component.html',
+  styleUrls: ['./styleguide.component.css']
 })
-export class HomeComponent implements OnInit {
+export class StyleguideComponent implements OnInit {
   allUsers: any;
+  public form = {
+    email: null,
+    password: null,
+  };
 
   constructor(private homeService: HomeService) { 
    }
@@ -27,7 +29,6 @@ export class HomeComponent implements OnInit {
         console.log(err);
       }
     );
-    
   }
 
 }
