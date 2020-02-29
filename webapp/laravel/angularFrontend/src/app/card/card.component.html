@@ -1,0 +1,30 @@
+<div class="mdc-card eventCard">
+    <div class="my-card__media mdc-card__media mdc-card__media--16-9" [style.background-image]="'url('+imgurl+')'">
+    </div>
+    <div class="cardContent" style="padding-top: 0px;">
+      <div class="cardTitle">
+        <h3 style="margin-bottom: 0px; margin-top: 10px; color: #808080;">{{ cardTitle }}</h3>
+        <p style="color: #808080;">{{ subtitle }}</p>
+        <span style="color: #808080;">{{ datum }}</span>
+        <p style="font-size: 13px; margin-bottom: -5px; color: #808080;">{{ content }}</p>
+      </div>
+      <div class="mdc-card__actions" style="padding: 0px; margin-top: 10px;">
+        <div class="mdc-card__action-buttons">
+          <button class="mdc-button mdc-card__action mdc-card__action--button mdc-button--raised beige">
+            <div class="mdc-button__ripple"></div>
+              <span class="mdc-button__label beigeInput">Mehr Infos</span>
+          </button>
+        </div>
+        <div class="mdc-card__action-icons">
+          <button class="mdc-icon-button mdc-card__action mdc-card__action--icon"
+          aria-pressed="false"
+          aria-label="Add to favorites"
+          title="Add to favorites">
+        <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+        <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+       </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

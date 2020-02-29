@@ -8,6 +8,7 @@
 <!-- Checkbox -->
 <h3>Checkbox</h3>
 <mat-checkbox color="warn">Check me!</mat-checkbox>
+
 <br>
 
 <!-- Input-Feld -->
@@ -18,6 +19,7 @@
     <input matInput placeholder="example@example.de" value="" type="email" name="email" id="inputEmail" [(ngModel)]="form.email" required>
   </mat-form-field>
 </form>
+
 <br/>
 
 <!-- Button beige -->
@@ -36,5 +38,24 @@
   <span class="mdc-button__label darkInput">Login</span>
 </button>
 
-<!-- Karten -->
+<br>
 
+<!-- Input für Datum -->
+<mat-form-field>
+  <mat-label>Wähle eine Datum</mat-label>
+  <input matInput [matDatepicker]="dp3" disabled>
+  <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+  <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+</mat-form-field>
+
+<br>
+
+<!-- Karten -->
+<app-card cardTitle="Sommerfest 2020" subtitle="Mosbacher Brauhaus" datum="29/04/2020" content="Lorem ipsum Lorem ipsumLorem Lorem ipsum Lorem ipsumLorem Lorem ipsumLorem" imgurl="https://www.fotomagazin.de/sites/www.fotomagazin.de/files/styles/landing_lead_mobile/public/fm/2019/aufmacher_fotowettbewerb_haida_landschaft.jpg?itok=yk9rEzGY&timestamp=1562245157"></app-card>
+
+<br>
+
+<!-- Karte mit Standarbild (falls keine imgurl vorhanden) -->
+<app-card cardTitle="Sommerfest 2020" subtitle="Mosbacher Brauhaus" datum="29/04/2020" content="Lorem ipsum Lorem ipsumLorem Lorem ipsum Lorem ipsumLorem Lorem ipsumLorem"></app-card>
+
+<br>

@@ -15,8 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './Services/auth.service';
-import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { StyleguideComponent } from './styleguide/styleguide.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { StyleguideComponent } from './styleguide/styleguide.component';
     ProfilComponent,
     RegisterComponent,
     StyleguideComponent,
+    CardComponent,
   ],
   imports: [
     LayoutModule,
@@ -38,6 +40,8 @@ import { StyleguideComponent } from './styleguide/styleguide.component';
     MatCheckboxModule,
     MatInputModule,
     FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [HomeService, AuthService],
   bootstrap: [AppComponent]

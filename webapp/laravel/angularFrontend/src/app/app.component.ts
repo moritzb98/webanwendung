@@ -10,6 +10,9 @@ export class AppComponent {
   title = 'Veranstaltungsmanager';
   loading = true;
 
+  constructor() {
+  }
+
   ngOnInit() {
     document.onreadystatechange = () => {
       if (document.readyState === 'complete') {

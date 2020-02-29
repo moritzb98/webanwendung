@@ -2,6 +2,7 @@
 /*@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";*/
 @import "~bootstrap/dist/css/bootstrap.css";
 @use "@material/button/mdc-button";
+@use "@material/card/mdc-card";
 
 
 html, body { height: 100%; }
@@ -67,3 +68,13 @@ h1,
   app-login {
     width: 100% !important;
   }
+
+  .eventCard {
+    height: 370px;
+    width: 300px;
+  }
+
+  .cardContent {
+    padding: 15px;
+  }
+
