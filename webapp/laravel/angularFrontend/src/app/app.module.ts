@@ -18,6 +18,7 @@ import { AuthService } from './Services/auth.service';
 import { MatButtonModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { CardComponent } from './card/card.component';
+import { CreateEventComponent } from './create-event/create-event.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CardComponent } from './card/card.component';
     RegisterComponent,
     StyleguideComponent,
     CardComponent,
+    CreateEventComponent,
   ],
   imports: [
     LayoutModule,
