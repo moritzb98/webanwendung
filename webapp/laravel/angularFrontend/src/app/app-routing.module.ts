@@ -1,3 +1,4 @@
+import { CreateEventComponent } from './create-event/create-event.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { StartseiteComponent } from './startseite/startseite.component';
@@ -28,7 +29,15 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent,
     canActivate: [BeforeLoginService]
-  }
+  },
+  {
+    path: 'createEvent',
+    component: CreateEventComponent,
+    canActivate: [BeforeLoginService]
+
+  },
+
+
 ];
 
 @NgModule({
