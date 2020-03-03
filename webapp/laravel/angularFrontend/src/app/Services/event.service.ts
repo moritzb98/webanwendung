@@ -9,6 +9,6 @@ export class EventService {
   constructor(private http: HttpClient) { }
 
   createEvent(data) {
-    return this.http.get('http://localhost/api/createEvent', data);
+    return this.http.post('http://localhost/api/createEvent', data);
   }
 }

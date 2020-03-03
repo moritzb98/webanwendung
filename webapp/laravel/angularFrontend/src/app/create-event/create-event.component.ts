@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateEventComponent implements OnInit {
   public form = {
-    titel: null,
-    subtitel: null,
+    title: null,
+    subtitle: null,
     date: null,
     description: null,
   };
@@ -30,8 +30,8 @@ export class CreateEventComponent implements OnInit {
   }
 
   handleResponse(data) {
-    this.router.navigateByUrl('/start');
-    console.log(data);
+    console.log('ds');
+    //this.router.navigateByUrl('/start');
   }
 
   handleError(error) {

@@ -6,42 +6,44 @@
     </div>
 
   <!-- Titel eingeben-->
-<h3 style="margin-top: 20px;">Titel</h3>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Titel</mat-label>
-    <input matInput placeholder="Titel der Veranstaltung" value="" type="text" name="titel" id="inputTitel" [(ngModel)]="form.titel" required>
+<form class="createEventForm" #createEventForm=ngForm (ngSubmit)="onSubmit()">
+  <h3 style="margin-top: 20px;">Titel</h3>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Titel</mat-label>
+      <input matInput placeholder="Titel der Veranstaltung" value="" type="text" name="titel" id="inputTitel" [(ngModel)]="form.title" required>
+    </mat-form-field>
+  </form>
+    <!-- Subtitel eingeben-->
+  <h3 style="margin-top: 20px;">Subtitel</h3>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Subtitel</mat-label>
+      <input matInput placeholder="Subtitel der Veranstaltung" value="" type="text" name="subtitel" id="inputSubtitel" [(ngModel)]="form.subtitle" required>
+    </mat-form-field>
+  </form>
+
+
+
+  <!-- Input für Datum -->
+  <mat-form-field>
+    <h3 style="margin-top: 20px;">Datum</h3>
+    <mat-label>Wähle eine Datum</mat-label>
+    <input matInput [matDatepicker]="dp3" disabled>
+    <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
   </mat-form-field>
-</form>
-  <!-- Subtitel eingeben-->
-<h3 style="margin-top: 20px;">Subtitel</h3>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Subtitel</mat-label>
-    <input matInput placeholder="Subtitel der Veranstaltung" value="" type="text" name="subtitel" id="inputSubtitel" [(ngModel)]="form.subtitel" required>
-  </mat-form-field>
-</form>
 
-
-
-<!-- Input für Datum -->
-<mat-form-field>
-  <h3 style="margin-top: 20px;">Datum</h3>
-  <mat-label>Wähle eine Datum</mat-label>
-  <input matInput [matDatepicker]="dp3" disabled>
-  <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
-  <mat-datepicker #dp3 disabled="false"></mat-datepicker>
-</mat-form-field>
-
-  <!-- Textfeld Beschreibung eingeben-->
-  <h3 style="margin-top: 20px;">Beschreibung</h3>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Beschreibung</mat-label>
-    <input matInput placeholder="Beschreibung" value="" type="text" name="descritption" id="inputDescription" [(ngModel)]="form.description" required>
-  </mat-form-field>
-</form>
+    <!-- Textfeld Beschreibung eingeben-->
+    <h3 style="margin-top: 20px;">Beschreibung</h3>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Beschreibung</mat-label>
+      <input matInput placeholder="Beschreibung" value="" type="text" name="descritption" id="inputDescription" [(ngModel)]="form.description" required>
+    </mat-form-field>
+  </form>
 
   <button style="margin-left: 20px" type="submit" class="mdc-button mdc-button--raised beige">
     <span class="mdc-button__label beigeInput">Erstellen</span>
   </button>
+</form>
