@@ -15,6 +15,7 @@ export class CreateEventComponent implements OnInit {
   };
 
   error: null;
+  router: any;
 
   constructor(private eventService: EventService) { }
 
@@ -26,6 +27,15 @@ export class CreateEventComponent implements OnInit {
       data => this.handleResponse(data),
       error => this.handleError(error)
     );
+  }
+
+  handleResponse(data) {
+    this.router.navigateByUrl('/start');
+    console.log(data);
+  }
+
+  handleError(error) {
+    this.error = error.error.error;
   }
 
 }
