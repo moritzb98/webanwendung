@@ -14,12 +14,6 @@ const routes: Routes = [
     path: 'style',
     component: StyleguideComponent
   },
-
-  {
-    path: 'start',
-    component: StartseiteComponent,
-    canActivate: [AfterLoginService]
-  },
   {
     path: 'login',
     component: LoginComponent,
@@ -31,10 +25,14 @@ const routes: Routes = [
     canActivate: [BeforeLoginService]
   },
   {
+    path: 'start',
+    component: StartseiteComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
     path: 'createEvent',
     component: CreateEventComponent,
-    canActivate: [BeforeLoginService]
-
+    canActivate: [AfterLoginService]
   },
 
 

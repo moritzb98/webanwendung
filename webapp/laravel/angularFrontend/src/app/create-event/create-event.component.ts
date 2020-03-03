@@ -1,3 +1,4 @@
+import { EventService } from './../Services/event.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-event.component.css']
 })
 export class CreateEventComponent implements OnInit {
+  public form = {
+    titel: null,
+    subtitel: null,
+    date: null,
+    description: null,
+  };
 
-  constructor() { }
+  error: null;
+
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    this.eventService.createEvent(this.form).subscribe(
+      data => this.handleResponse(data),
+      error => this.handleError(error)
+    );
   }
 
 }
