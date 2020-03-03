@@ -1,5 +1,8 @@
 import { EventService } from './../Services/event.service';
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import { MatDatepickerInputEvent } from '@angular/material';
+
 
 @Component({
   selector: 'app-create-event',
@@ -15,9 +18,8 @@ export class CreateEventComponent implements OnInit {
   };
 
   error: null;
-  router: any;
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -30,12 +32,16 @@ export class CreateEventComponent implements OnInit {
   }
 
   handleResponse(data) {
-    console.log('ds');
-    //this.router.navigateByUrl('/start');
+    this.router.navigateByUrl('start');
   }
 
   handleError(error) {
     this.error = error.error.error;
+  }
+
+  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+    const date = new Date(`${event.value}`);
+    this.form.date = date.getDate() + '/' + (date.getMonth() + 1 ) + '/' + date.getFullYear();
   }
 
 }
