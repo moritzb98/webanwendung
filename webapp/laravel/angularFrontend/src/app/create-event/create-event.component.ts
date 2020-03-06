@@ -32,7 +32,7 @@ export class CreateEventComponent implements OnInit {
   }
 
   handleResponse(data) {
-    this.router.navigateByUrl('start');
+    this.router.navigateByUrl('events');
   }
 
   handleError(error) {

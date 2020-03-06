@@ -34,3 +34,4 @@ Route::group([
 });
 
 Route::post('createEvent', 'EventController@create');
+Route::get('events', 'EventController@show');

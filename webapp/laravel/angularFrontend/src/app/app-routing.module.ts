@@ -1,3 +1,4 @@
+import { EventsComponent } from './events/events.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
     path: 'createEvent',
     component: CreateEventComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'events',
+    component: EventsComponent,
     canActivate: [AfterLoginService]
   },
 

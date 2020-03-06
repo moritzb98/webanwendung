@@ -9,7 +9,7 @@
   <div *ngIf="loggedIn" class="container navbar">
         <a href="#" class="navbar-brand" >HOME</a > 
         <a href="#"class="navbar-brand" >TO DO'S</a>
-        <a href="#" class="navbar-brand" >VERANSTALTUNGEN</a>
+        <a [routerLink]="['/events']" class="navbar-brand" >VERANSTALTUNGEN</a>
         <img class="logo" style="width: 25%; margin-top: 40px;" src="../../assets/img/Logo_WA.png"/>
         <a href="#" class="navbar-brand" >KALENDER</a>
         <a href="#" class="navbar-brand" >INSPO</a>

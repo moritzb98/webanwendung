@@ -19,6 +19,7 @@ import { MatButtonModule, MatFormFieldModule, MatInputModule, MatDatepickerModul
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { CardComponent } from './card/card.component';
 import { CreateEventComponent } from './create-event/create-event.component';
+import { EventsComponent } from './events/events.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { CreateEventComponent } from './create-event/create-event.component';
     StyleguideComponent,
     CardComponent,
     CreateEventComponent,
+    EventsComponent,
   ],
   imports: [
     LayoutModule,

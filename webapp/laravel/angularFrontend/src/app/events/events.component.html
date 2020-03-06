@@ -1,0 +1,12 @@
+<div class="headline" style="display: flex; margin-bottom: 1em; margin-top: 2em;">
+    <h3 style="margin-right: 3em;">Meine Veranstaltungen</h3>
+    <button [routerLink]="['/createEvent']" type="submit" class="mdc-button mdc-button--raised light">
+        <span class="mdc-button__label lightInput">Event erstellen</span>
+    </button>
+</div>
+<div style="display: flex; overflow: scroll;">
+    <div *ngFor="let card of cards" style="margin-right: 2em;">
+        <app-card cardTitle="{{card.title}}" subtitle="{{card.subtitle}}" datum="{{card.date}}" content="{{card.description}}"></app-card>
+    </div> 
+</div>
+
