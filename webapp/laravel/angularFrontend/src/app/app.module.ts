@@ -21,6 +21,8 @@ import { CardComponent } from './card/card.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { EventsComponent } from './events/events.component';
 import { KontaktlisteComponent } from './kontaktliste/kontaktliste.component';
+import { InspirationComponent } from './inspiration/inspiration.component';
+import { KalenderComponent } from './kalender/kalender.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { KontaktlisteComponent } from './kontaktliste/kontaktliste.component';
     CreateEventComponent,
     EventsComponent,
     KontaktlisteComponent,
+    InspirationComponent,
+    KalenderComponent,
   ],
   imports: [
     LayoutModule,
