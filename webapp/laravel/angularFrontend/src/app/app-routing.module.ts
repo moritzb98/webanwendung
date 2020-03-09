@@ -1,3 +1,4 @@
+import { KontaktlisteComponent } from './kontaktliste/kontaktliste.component';
 import { EventsComponent } from './events/events.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { RegisterComponent } from './register/register.component';
@@ -38,6 +39,13 @@ const routes: Routes = [
   {
     path: 'events',
     component: EventsComponent,
+    canActivate: [AfterLoginService]
+  },
+
+
+  {
+    path: 'kontaktliste',
+    component: KontaktlisteComponent,
     canActivate: [AfterLoginService]
   },
 

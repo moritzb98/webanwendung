@@ -15,11 +15,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './Services/auth.service';
-import { MatButtonModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { MatInputModule, MatDatepickerModule, MatNativeDateModule, MatDividerModule, MatListModule } from '@angular/material';
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { CardComponent } from './card/card.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { EventsComponent } from './events/events.component';
+import { KontaktlisteComponent } from './kontaktliste/kontaktliste.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { EventsComponent } from './events/events.component';
     CardComponent,
     CreateEventComponent,
     EventsComponent,
+    KontaktlisteComponent,
   ],
   imports: [
     LayoutModule,
@@ -45,7 +47,9 @@ import { EventsComponent } from './events/events.component';
     MatInputModule,
     FormsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatDividerModule,
+    MatListModule,
   ],
   providers: [HomeService, AuthService],
   bootstrap: [AppComponent]
