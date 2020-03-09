@@ -1,3 +1,4 @@
+import { InspirationComponent } from './inspiration/inspiration.component';
 import { KontaktlisteComponent } from './kontaktliste/kontaktliste.component';
 import { EventsComponent } from './events/events.component';
 import { CreateEventComponent } from './create-event/create-event.component';
@@ -9,7 +10,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { BeforeLoginService } from './Services/before-login.service';
 import { AfterLoginService } from './Services/after-login.service';
 import { StyleguideComponent } from './styleguide/styleguide.component';
-
 
 const routes: Routes = [
   {
@@ -49,6 +49,11 @@ const routes: Routes = [
     canActivate: [AfterLoginService]
   },
 
+  {
+    path: 'Inspiration',
+    component: InspirationComponent,
+    canActivate: [AfterLoginService]
+  },
 
 ];
 
