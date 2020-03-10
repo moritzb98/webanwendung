@@ -41,8 +41,6 @@ const routes: Routes = [
     component: EventsComponent,
     canActivate: [AfterLoginService]
   },
-
-
   {
     path: 'kontaktliste',
     component: KontaktlisteComponent,
@@ -54,7 +52,6 @@ const routes: Routes = [
     component: InspirationComponent,
     canActivate: [AfterLoginService]
   },
-
 ];
 
 @NgModule({

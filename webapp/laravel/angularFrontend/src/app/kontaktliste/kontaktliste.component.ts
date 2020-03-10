@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kontaktliste.component.css']
 })
 export class KontaktlisteComponent implements OnInit {
-
+  toggleCatering = true;
   constructor() { }
 
   ngOnInit() {

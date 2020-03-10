@@ -1,0 +1,13 @@
+.circular--portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .circular--portrait {
+    position: relative;
+    width: 9em;
+    height: 9em;
+    overflow: hidden;
+    border-radius: 50%;
+  }
