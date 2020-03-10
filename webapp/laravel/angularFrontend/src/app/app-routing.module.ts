@@ -50,7 +50,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'Inspiration',
+    path: 'inspiration',
     component: InspirationComponent,
     canActivate: [AfterLoginService]
   },
