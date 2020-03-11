@@ -88,4 +88,10 @@ class EventController extends Controller
     {
         //
     }
+
+    public function delete(Request $request) {
+        Event::where('id', $request[0])->delete();
+        return response()->json($request, 200);
+    }
+
 }

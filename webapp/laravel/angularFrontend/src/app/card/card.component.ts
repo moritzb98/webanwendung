@@ -1,3 +1,4 @@
+import { EventsComponent } from './../events/events.component';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
