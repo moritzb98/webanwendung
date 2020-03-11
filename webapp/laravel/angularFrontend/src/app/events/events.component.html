@@ -4,10 +4,10 @@
         <span class="mdc-button__label lightInput">Event erstellen</span>
     </button>
 </div>
-<div style="display: flex; overflow: scroll;">
+<div class="frame" style="display: flex; overflow: scroll;">
     <div *ngFor="let card of cards; let i = index;" style="margin-right: 2em; height: 30em;">
         <p (click)="delete(this.cards[i].id, i)" style="cursor: pointer;">löschen</p>
         <app-card cardTitle="{{card.title}}" subtitle="{{card.subtitle}}" datum="{{card.date}}" content="{{card.description}}"></app-card>
-    </div> 
+    </div>
 </div>
 
