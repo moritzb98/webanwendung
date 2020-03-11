@@ -27,7 +27,7 @@ export class EventsComponent implements OnInit {
     );
   }
 
-  delete(eventId) {
+  delete(eventId, index) {
     const deleteE = this.eventService.deleteEvent(eventId).subscribe(
       data => {
       },
@@ -35,6 +35,7 @@ export class EventsComponent implements OnInit {
         console.log(err);
       }
     );
+    this.cards.splice(index, 1);
   }
 
 }
