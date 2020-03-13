@@ -1,3 +1,4 @@
+import { UserService } from './../Services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EigenesProfilComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.getUserName();
   }
+
+  getUserName(){
+    const eventsData = this.userService.getUserData().subscribe(
+      data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
 
 }

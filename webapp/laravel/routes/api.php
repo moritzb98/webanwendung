@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/users', 'UserController@getUser');
+Route::get('/actualUser', 'UserController@getActualUser');
 
 Route::group([
 

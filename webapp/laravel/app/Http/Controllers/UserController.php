@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\User;
+use JWTAuth;
 
 class UserController extends Controller
 {
@@ -15,5 +17,12 @@ class UserController extends Controller
         ];
 
         return response()->json($response, 200);
+    }
+
+    public function getActualUser()
+    {
+        $currentUser = User::all();
+
+        return response()->json($currentUser, 200);
     }
 }
