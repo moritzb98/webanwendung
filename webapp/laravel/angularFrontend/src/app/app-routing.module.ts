@@ -1,3 +1,4 @@
+import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.component';
 import { InspirationComponent } from './inspiration/inspiration.component';
 import { KontaktlisteComponent } from './kontaktliste/kontaktliste.component';
 import { EventsComponent } from './events/events.component';
@@ -52,6 +53,12 @@ const routes: Routes = [
     component: InspirationComponent,
     canActivate: [AfterLoginService]
   },
+
+  {
+  path: 'meinProfil',
+  component: EigenesProfilComponent,
+  canActivate: [AfterLoginService]
+},
 ];
 
 @NgModule({
