@@ -19,9 +19,9 @@ class UserController extends Controller
         return response()->json($response, 200);
     }
 
-    public function getActualUser()
+    public function getCurrentUser()
     {
-        $currentUser = User::all();
+        $currentUser = Auth::guard('api')->user();
 
         return response()->json($currentUser, 200);
     }

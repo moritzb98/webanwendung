@@ -31,7 +31,7 @@ class AuthController extends Controller
         if (! $token = auth()->attempt($credentials)) {
             return response()->json(['error' => 'E-mail oder Passwort stimmt nicht.'], 401);
         }
-
+        
         return $this->respondWithToken($token);
     }
 
