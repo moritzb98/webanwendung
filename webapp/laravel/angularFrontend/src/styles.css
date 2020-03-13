@@ -90,6 +90,10 @@ app-kontaktliste {
   width: 100% !important;
 }
 
+app-eigenes-profil {
+  width: 100% !important;
+}
+
 .mat-list-item-content{
   padding: 0px !important;
 }
