@@ -1,4 +1,5 @@
 import { AuthTokenService } from './../Services/auth-token.service';
+import { AuthService } from './../Services/auth.service';
 import { UserService } from './../Services/user.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,23 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./eigenes-profil.component.css']
 })
 export class EigenesProfilComponent implements OnInit {
+  vorname = null;
 
-  constructor(private userService: UserService, private auth: AuthTokenService) { }
+  constructor(private userService: UserService, private token: AuthTokenService) { }
 
   ngOnInit() {
-    this.getUserName();
+    this.getVorname();
   }
 
-  getUserName(){
-    const eventsData = this.userService.getUserData().subscribe(
-      data => {
-        console.log(data);
-      },
-      err => {
-        console.log(err);
-      }
-    );
+  getVorname(){
+    this.vorname = this.token.getVorname();
   }
-
-
 }

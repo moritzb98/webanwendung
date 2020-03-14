@@ -8,6 +8,7 @@ export class AuthTokenService {
     login: 'http://localhost/api/login',
     register: 'http://localhost/api/register'
   };
+  http: any;
 
   constructor() { }
 
@@ -15,8 +16,16 @@ export class AuthTokenService {
     this.set(token);
   }
 
+  setUser(data) {
+    localStorage.setItem('vorname', data.user);
+  }
+
   set(token) {
     localStorage.setItem('token', token);
+  }
+
+  getVorname() {
+    return localStorage.getItem('vorname');
   }
 
   get() {
@@ -25,6 +34,7 @@ export class AuthTokenService {
 
   remove() {
     localStorage.removeItem('token');
+    localStorage.removeItem('vorname');
   }
 
   isValid() {
