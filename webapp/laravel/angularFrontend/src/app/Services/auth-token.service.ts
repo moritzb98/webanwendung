@@ -17,7 +17,7 @@ export class AuthTokenService {
   }
 
   setUser(data) {
-    localStorage.setItem('vorname', data.user);
+    localStorage.setItem('vorname', data);
   }
 
   set(token) {
