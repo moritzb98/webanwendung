@@ -36,6 +36,7 @@ export class RegisterComponent implements OnInit {
   }
 
   handleResponse(data) {
+    this.auth.login(this.form);
     this.token.handle(data.access_token);
     this.checkAuth.changeAuthStatus(true);
     this.router.navigateByUrl('/start');

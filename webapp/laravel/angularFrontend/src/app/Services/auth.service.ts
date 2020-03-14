@@ -10,7 +10,6 @@ export class AuthService {
   constructor(private http: HttpClient, private token: AuthTokenService) { }
 
   register(data) {
-    this.token.setUser(data.name);
     return this.http.post('http://localhost/api/register', data);
   }
 
@@ -18,6 +17,7 @@ export class AuthService {
     this.http.post('http://localhost/api/login', data).subscribe(
       data => {
         this.token.setUser(data.user);
+        this.token.setUserId(data.userID);
       },
       err => {
         console.log(err);

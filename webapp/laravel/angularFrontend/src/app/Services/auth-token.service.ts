@@ -20,12 +20,20 @@ export class AuthTokenService {
     localStorage.setItem('vorname', data);
   }
 
+  setUserId(data) {
+    localStorage.setItem('id', data);
+  }
+
   set(token) {
     localStorage.setItem('token', token);
   }
 
   getVorname() {
     return localStorage.getItem('vorname');
+  }
+
+  getUserId() {
+    return localStorage.getItem('id');
   }
 
   get() {
@@ -35,6 +43,7 @@ export class AuthTokenService {
   remove() {
     localStorage.removeItem('token');
     localStorage.removeItem('vorname');
+    localStorage.removeItem('id');
   }
 
   isValid() {
