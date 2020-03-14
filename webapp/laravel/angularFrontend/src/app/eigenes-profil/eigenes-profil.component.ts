@@ -1,3 +1,4 @@
+import { AuthTokenService } from './../Services/auth-token.service';
 import { UserService } from './../Services/user.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EigenesProfilComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private auth: AuthTokenService) { }
 
   ngOnInit() {
     this.getUserName();

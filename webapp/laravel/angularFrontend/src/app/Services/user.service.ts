@@ -8,8 +8,8 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUserData(){
-    return this.http.get('http://localhost/api/currentUser');
+  getUserData() {
+    return this.http.get('http://localhost/api/me');
   }
 
 }
