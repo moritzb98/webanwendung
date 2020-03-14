@@ -1,5 +1,25 @@
-.loginScreen {
+.toolbar{
+    display: none !important;
+}
+
+.example-full-width {
+    width: 100%;
+    text-align: center;
+}
+
+.registerScreen {
     width: 100%;
     border: 5px solid #B7A58A;
     border-radius: 1em;
+    height: 30em;
+    object-fit: cover;
+}
+
+.registerForm {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
 }

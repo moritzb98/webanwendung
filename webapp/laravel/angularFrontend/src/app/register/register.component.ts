@@ -15,8 +15,11 @@ export class RegisterComponent implements OnInit {
   public form = {
     email: null,
     name: null,
+    surname: null,
     password: null,
-    password_confirmation: null
+    password_confirmation: null,
+    alter: null,
+    wohnort: null,
   };
   public error = [];
 

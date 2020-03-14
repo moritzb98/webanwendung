@@ -10,7 +10,6 @@ import { HomeService } from './home.service';
 import { StartseiteComponent } from './startseite/startseite.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
-import { ProfilComponent } from './profil/profil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RegisterComponent } from './register/register.component';
@@ -32,7 +31,6 @@ import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.componen
     StartseiteComponent,
     NavbarComponent,
     LoginComponent,
-    ProfilComponent,
     RegisterComponent,
     StyleguideComponent,
     CardComponent,

@@ -1,55 +1,89 @@
 
 <div class="row">
   <div class="col-6">
-    <img class="loginScreen" src="../../assets/img/registerScreen.jpg" alt="People">
-  </div>
-<form #registerForm=ngForm (ngSubmit)="onSubmit()">
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
-            <mat-label>Emailadresse</mat-label>
-            <input matInput placeholder="example@example.de" value="" type="email" name="email" id="inputEmail" [(ngModel)]="form.email" required>
-          </mat-form-field>
-        </form>
-      </div>
-    </div>
-    <div class="alert alert-danger" [hidden]="!error.email">{{ error.email }}</div>
-    <div class="form-group row">
-        <div class="col-sm-10">
+    <h1 style="text-align: center; margin-bottom: 1em;" >Registriere dich jetzt!</h1>
+    <form #registerForm=ngForm (ngSubmit)="onSubmit()">
+      <div class="form-group row">
+        <div class="col-sm-12">
           <form class="example-form">
             <mat-form-field class="example-full-width">
-              <mat-label>Name</mat-label>
-              <input matInput placeholder="Name" value="" type="text" name="name" id="inputName" [(ngModel)]="form.name" required>
+              <mat-label>Emailadresse</mat-label>
+              <input matInput placeholder="example@example.de" value="" type="email" name="email" id="inputEmail" [(ngModel)]="form.email" required>
             </mat-form-field>
           </form>
         </div>
       </div>
-      <div class="alert alert-danger" [hidden]="!error.name">{{ error.name }}</div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
-            <mat-label>Passwort</mat-label>
-            <input matInput placeholder="example@example.de" value="" type="password" name="password" id="inputPassword" [(ngModel)]="form.password" required>
-          </mat-form-field>
-        </form>
-      </div>
-    </div>
-    <div class="form-group row">
-        <div class="col-sm-10">
-          <form class="example-form">
-            <mat-form-field class="example-full-width">
-              <mat-label>Passwort wiederholen</mat-label>
-              <input matInput placeholder="example@example.de" value="" type="password" name="password_confirmation" id="inputPassword_confirmed3" [(ngModel)]="form.password_confirmation" required>
-            </mat-form-field>
-          </form>
+        <div class="alert alert-danger" [hidden]="!error.email">{{ error.email }}</div>
+        <div class="form-group row">
+            <div class="col-sm-6">
+              <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Vorname</mat-label>
+                  <input matInput placeholder="Max" value="" type="text" name="name" id="inputName" [(ngModel)]="form.name" required>
+                </mat-form-field>
+              </form>
+              <div class="alert alert-danger" [hidden]="!error.name">{{ error.name}}</div>
+            </div>
+            <div class="col-sm-6">
+              <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Nachname</mat-label>
+                  <input matInput placeholder="Mustermann" value="" type="text" name="name" id="inputSurname" [(ngModel)]="form.surname" required>
+                </mat-form-field>
+              </form>
+              <div class="alert alert-danger" [hidden]="!error.name">{{ error.surname}}</div>
+            </div>
+          </div>
+          
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <mat-label>Passwort</mat-label>
+                <input matInput placeholder="Madinds_dmi63" value="" type="password" name="password" id="inputPassword" [(ngModel)]="form.password" required>
+              </mat-form-field>
+            </form>
+          </div>
+          <div class="col-sm-6">
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <mat-label>Passwort wiederholen</mat-label>
+                <input matInput placeholder="Madinds_dmi63" value="" type="password" name="password_confirmation" id="inputPassword_confirmed3" [(ngModel)]="form.password_confirmation" required>
+              </mat-form-field>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class="alert alert-danger" [hidden]="!error.password">{{ error.password }}</div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Registrieren</button>
-      </div>
+        <div class="alert alert-danger" [hidden]="!error.password">{{ error.password }}</div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <mat-label>Alter</mat-label>
+                <input matInput placeholder="24" value="" type="number" name="alter" id="inputAlter" [(ngModel)]="form.alter" required>
+              </mat-form-field>
+            </form>
+            <div class="alert alert-danger" [hidden]="!error.name">{{ error.alter}}</div>
+          </div>
+          <div class="col-sm-6">
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <mat-label>Wohnort</mat-label>
+                <input matInput placeholder="Mosbach" value="" type="text" name="wohnort" id="inputWohnort" [(ngModel)]="form.wohnort" required>
+              </mat-form-field>
+            </form>
+            <div class="alert alert-danger" [hidden]="!error.name">{{ error.wohnort}}</div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <button style="width: 100%;" type="submit" [disabled]="!registerForm.valid" class="mdc-button mdc-button--raised beige">
+              <span class="mdc-button__label beigeInput" >Registrieren</span>
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
-  </form>
+    <div class="col-6">
+      <img class="registerScreen" src="../../assets/img/registerScreen.jpg" alt="People">
+    </div>
+</div>
