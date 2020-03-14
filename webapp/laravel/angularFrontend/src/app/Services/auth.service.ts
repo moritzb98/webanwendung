@@ -10,14 +10,6 @@ export class AuthService {
   constructor(private http: HttpClient, private token: AuthTokenService) { }
 
   register(data) {
-    this.http.post('http://localhost/api/register', data).subscribe(
-      data => {
-        console.log(data);
-      },
-      err => {
-        console.log(err);
-      }
-    );
     return this.http.post('http://localhost/api/register', data);
   }
 

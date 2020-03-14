@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../Services/auth.service';
 import { AuthTokenService } from '../Services/auth-token.service';
 import { Router } from '@angular/router';
+import { CheckAuthService } from '../Services/check-auth.service';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class RegisterComponent implements OnInit {
   };
   public error = [];
 
-  constructor(private auth: AuthService, private token: AuthTokenService, private router: Router) { }
+  constructor(private auth: AuthService, private token: AuthTokenService, private router: Router, private checkAuth: CheckAuthService) { }
 
   ngOnInit() {
   }
@@ -33,6 +34,7 @@ export class RegisterComponent implements OnInit {
 
   handleResponse(data) {
     this.token.handle(data.access_token);
+    this.checkAuth.changeAuthStatus(true);
     this.router.navigateByUrl('/start');
   }
 
