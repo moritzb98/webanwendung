@@ -20,6 +20,11 @@ h1,
   
   p, span {
     color: #F5F0ED;
+    font-family: Lato;
+  }
+
+  button p, span {
+    font-family: Oswald;
   }
 
   a {

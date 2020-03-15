@@ -16,3 +16,28 @@
   .abstandunten {
     margin-bottom: 0.5em;
   }
+
+  .schriftGrau{
+    color: #707070;
+  }
+
+  .mittigWenigAbstand{
+    text-align: center;
+    margin-top: -0.5em;
+  }
+
+  .großerText{
+    font-size: 2.5em;
+    font-family: Oswald;
+
+  }
+
+  .ügold{
+    color: #B7A58A;
+    font-family: Lato;
+    font-weight: 100;
+  }
+
+  .mittig{
+    text-align: center;
+  }
