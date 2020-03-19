@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit {
     password_confirmation: null,
     alter: null,
     wohnort: null,
+    image: null,
   };
   public error = [];
 

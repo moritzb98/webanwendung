@@ -23,6 +23,7 @@ import { KontaktlisteComponent } from './kontaktliste/kontaktliste.component';
 import { InspirationComponent } from './inspiration/inspiration.component';
 import { KalenderComponent } from './kalender/kalender.component';
 import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.component';
+import { BilduploadComponent } from './bildupload/bildupload.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.componen
     InspirationComponent,
     KalenderComponent,
     EigenesProfilComponent,
+    BilduploadComponent,
   ],
   imports: [
     LayoutModule,

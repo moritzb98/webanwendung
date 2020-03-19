@@ -1,3 +1,4 @@
+import { BilduploadComponent } from './bildupload/bildupload.component';
 import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.component';
 import { InspirationComponent } from './inspiration/inspiration.component';
 import { KontaktlisteComponent } from './kontaktliste/kontaktliste.component';
@@ -58,7 +59,12 @@ const routes: Routes = [
   path: 'meinProfil',
   component: EigenesProfilComponent,
   canActivate: [AfterLoginService]
-},
+  },
+  {
+    path: 'bildupload',
+    component: BilduploadComponent,
+    canActivate: [AfterLoginService]
+  },
 ];
 
 @NgModule({
