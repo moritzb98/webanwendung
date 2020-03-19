@@ -75,10 +75,10 @@
 
         <mat-list-item>
              <a href="#"><img style="height: 1.5em;" src="../../assets/icon/user.svg"></a>
-            <h4 style="margin-left: 0.6em;">Drinks distributors</h4>
+             <h4 (click)="toggleDrinks = !toggleDrinks" style="margin-left: 0.6em; cursor: pointer">Drinksdistributors</h4>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <div class="ListContent" *ngIf="toggleCatering">
+        <div class="ListContent" *ngIf="toggleDrinks">
             
             <!-- Erster Eintrag in Kontaktliste -->
             <div class="row" style="margin-top: 2em;">
@@ -146,14 +146,14 @@
 
         <mat-list-item>
              <a href="#"><img style="height: 1.5em;" src="../../assets/icon/user.svg"></a>
-            <h4 style="margin-left: 0.6em;">Entertainment</h4>
+             <h4 (click)="toggleEntertainment = !toggleEntertainment" style="margin-left: 0.6em; cursor: pointer">Entertainment</h4>
         </mat-list-item>
         <mat-divider></mat-divider>
 
   
       
      
-   <div class="ListContent" *ngIf="toggleCatering">
+   <div class="ListContent" *ngIf="toggleEntertainment">
        
        <!-- Erster Eintrag in Kontaktliste -->
        <div class="row" style="margin-top: 2em;">
@@ -220,7 +220,7 @@
 
 <mat-list-item>
     <a href="#"><img style="height: 1.5em;" src="../../assets/icon/user.svg"></a>
-   <h4 style="margin-left: 0.6em;">Location</h4>
+    <h4 (click)="toggleLocation = !toggleLocation" style="margin-left: 0.6em; cursor: pointer">Location</h4>
 </mat-list-item>
 <mat-divider></mat-divider>
 
@@ -228,7 +228,7 @@
 
 
 
-<div class="ListContent" *ngIf="toggleCatering">
+<div class="ListContent" *ngIf="toggleLocation">
 
 <!-- Erster Eintrag in Kontaktliste -->
 <div class="row" style="margin-top: 2em;">

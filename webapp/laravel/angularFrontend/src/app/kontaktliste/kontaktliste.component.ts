@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KontaktlisteComponent implements OnInit {
   toggleCatering = true;
+  toggleDrinks = true;
+  toggleEntertainment = true;
+  toggleLocation = true;
   constructor() { }
 
   ngOnInit() {
