@@ -15,7 +15,11 @@ export class BilduploadComponent implements OnInit {
   }
 
   upload() {
-    this.uploadService.uploadImage(this.selectedImage);
+    this.uploadService.uploadImage(this.selectedImage).subscribe(
+      data => {
+        console.log(data);
+      }
+    );
   }
 
   selectImage(event) {

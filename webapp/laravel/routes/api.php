@@ -37,3 +37,7 @@ Route::group([
 Route::post('createEvent', 'EventController@create');
 Route::get('events', 'EventController@show');
 Route::post('delEvents', 'EventController@delete');
+
+Route::post('/pimg/id', 'ImageController@index');
+Route::post('pimg', 'ImageController@store');
+Route::get('pimg', 'ImageController@show');

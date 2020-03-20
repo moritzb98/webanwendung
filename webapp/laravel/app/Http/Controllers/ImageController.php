@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Event;
+use App\Http\Controllers\UserController;
+use App\User;
+use App\Http\Controllers\AuthController;
 
-class EventController extends Controller
+class ImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,6 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -24,8 +25,7 @@ class EventController extends Controller
      */
     public function create(Request $request)
     {
-        Event::create($request->all());
-        return response($request, 201);
+    
     }
 
     /**
@@ -35,9 +35,22 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
-    }
+    {   
+
+
+        if ($request->hasFile('image'))
+      {
+            $file      = $request->file('image');
+            $filename  = $file->getClientOriginalName();
+            $extension = $file->getClientOriginalExtension();
+            $file->move(public_path('img'), $filename);
+            return response()->json($request);
+      } 
+        else
+      {
+            return response()->json(["message" => "Select image first."]);
+
+    }}
 
     /**
      * Display the specified resource.
@@ -47,11 +60,6 @@ class EventController extends Controller
      */
     public function show()
     {
-        $events = Event::all();
-        $response = [
-            'events' => $events
-        ];
-
         return response()->json($response, 200);
     }
 
@@ -75,7 +83,7 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**
@@ -88,10 +96,4 @@ class EventController extends Controller
     {
         //
     }
-
-    public function delete(Request $request) {
-        Event::where('id', $request[0])->delete();
-        return response()->json($request, 200);
-    }
-
 }

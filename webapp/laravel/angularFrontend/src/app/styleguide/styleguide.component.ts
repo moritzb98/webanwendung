@@ -31,12 +31,6 @@ export class StyleguideComponent implements OnInit {
     );
   }
 
-  upload() {
-    console.log('Jaa');
-  }
-
-  selectedFile(event) {
-    console.log(event);
-  }
+  
 
 }

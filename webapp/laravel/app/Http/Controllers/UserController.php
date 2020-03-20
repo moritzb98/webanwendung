@@ -20,7 +20,7 @@ class UserController extends Controller
     }
 
     
-    public function getCurrentUser()
+    public static function getCurrentUser()
     {
         $currentUser = AuthController::me();
 
