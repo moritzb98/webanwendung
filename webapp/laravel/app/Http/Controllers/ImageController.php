@@ -36,7 +36,7 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {   
-
+        $id = $request->id;
 
         if ($request->hasFile('image'))
       {
@@ -44,11 +44,12 @@ class ImageController extends Controller
             $filename  = $file->getClientOriginalName();
             $extension = $file->getClientOriginalExtension();
             $file->move(public_path('img'), $filename);
-            return response()->json($request);
+            User::where('id', $id)->update((['image' => $filename]));
+            return response()->json(["message" => "Bild hochgeladen."]);
       } 
         else
       {
-            return response()->json(["message" => "Select image first."]);
+            return response()->json(["message" => "Wähle erst ein Bild aus."]);
 
     }}
 
