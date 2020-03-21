@@ -24,6 +24,12 @@ import { InspirationComponent } from './inspiration/inspiration.component';
 import { KalenderComponent } from './kalender/kalender.component';
 import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.component';
 import { BilduploadComponent } from './bildupload/bildupload.component';
+import { CommonModule } from '@angular/common';
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -56,6 +62,13 @@ import { BilduploadComponent } from './bildupload/bildupload.component';
     MatNativeDateModule,
     MatDividerModule,
     MatListModule,
+    CommonModule,
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
+    NgbModalModule
   ],
   providers: [HomeService, AuthService],
   bootstrap: [AppComponent]

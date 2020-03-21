@@ -1,3 +1,4 @@
+import { KalenderComponent } from './kalender/kalender.component';
 import { BilduploadComponent } from './bildupload/bildupload.component';
 import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.component';
 import { InspirationComponent } from './inspiration/inspiration.component';
@@ -63,6 +64,11 @@ const routes: Routes = [
   {
     path: 'bildupload',
     component: BilduploadComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'kalender',
+    component: KalenderComponent,
     canActivate: [AfterLoginService]
   },
 ];

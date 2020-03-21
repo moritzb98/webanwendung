@@ -13,6 +13,7 @@ export class AppComponent {
   constructor() {
   }
 
+  // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() {
     document.onreadystatechange = () => {
       if (document.readyState === 'complete') {
