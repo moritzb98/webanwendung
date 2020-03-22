@@ -9,9 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EigenesProfilComponent implements OnInit {
   vorname = null;
-  profilePicture = '../../../../public/storage/laravel/';
-  standardPicture = 'martin-pechy.jpg';
-  
+  profilePicture = '';
 
   constructor(private userService: UserService, private token: AuthTokenService) { }
 
@@ -28,8 +26,8 @@ export class EigenesProfilComponent implements OnInit {
     const id = localStorage.getItem('id');
     this.userService.getUploadedImage(id).subscribe(
       data => {
-        this.standardPicture = data.image;
-        this.profilePicture += this.standardPicture;
+        this.profilePicture = 'http://localhost/img/' + data.image;
+        console.log(this.profilePicture);
       }
     );
   }

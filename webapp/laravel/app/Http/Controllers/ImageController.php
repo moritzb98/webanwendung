@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\UserController;
 use App\User;
 use App\Http\Controllers\AuthController;
+use File;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -53,6 +55,7 @@ class ImageController extends Controller
 
     }}
 
+   
     /**
      * Display the specified resource.
      *
