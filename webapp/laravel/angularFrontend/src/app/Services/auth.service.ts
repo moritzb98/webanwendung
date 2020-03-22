@@ -16,8 +16,8 @@ export class AuthService {
   login(data) {
     this.http.post('http://localhost/api/login', data).subscribe(
      data => {
-       this.token.setUser(data.user);
-        this.token.setUserId(data.userID);
+       /*this.token.setUser(data.user);
+        this.token.setUserId(data.userID);*/
       },
       err => {
         console.log(err);
