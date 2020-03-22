@@ -15,4 +15,5 @@ export class BilduploadService {
     formData.append('id', id);
     return this.http.post('http://localhost/api/pimg', formData);
   }
+
 }

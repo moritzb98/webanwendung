@@ -57,11 +57,13 @@ class ImageController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show ($id)
     {
-        return response()->json($response, 200);
+        $image = User::where('id', $id)->first('image');
+        return response()->json($image, 200);
     }
 
     /**
