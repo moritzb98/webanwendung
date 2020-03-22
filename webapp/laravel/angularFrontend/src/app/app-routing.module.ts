@@ -13,6 +13,7 @@ import { BeforeLoginService } from './Services/before-login.service';
 import { AfterLoginService } from './Services/after-login.service';
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { ToDoComponent } from './to-do/to-do.component';
+import { ToDoOverviewComponent } from './to-do-overview/to-do-overview.component';
 
 const routes: Routes = [
   {
@@ -69,6 +70,11 @@ const routes: Routes = [
   {
     path: 'ToDo',
     component: ToDoComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'ToDoOverview',
+    component: ToDoOverviewComponent,
     canActivate: [AfterLoginService]
   },
 ];
