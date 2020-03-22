@@ -1,5 +1,6 @@
 import { BilduploadService } from './../Services/bildupload.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bildupload',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class BilduploadComponent implements OnInit {
   selectedImage = null;
 
-  constructor(private uploadService: BilduploadService) { }
+  constructor(private uploadService: BilduploadService, private router: Router) { }
 
   ngOnInit() {
   }

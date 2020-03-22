@@ -59,7 +59,7 @@
             <form class="example-form">
               <mat-form-field class="example-full-width">
                 <mat-label>Alter</mat-label>
-                <input matInput placeholder="24" value="" type="number" name="alter" id="inputAlter" [(ngModel)]="form.alter" required>
+                <input matInput placeholder="0" value="" type="number" name="alter" id="inputAlter" [(ngModel)]="form.alter" required>
               </mat-form-field>
             </form>
             <div class="alert alert-danger" [hidden]="!error.name">{{ error.alter}}</div>
