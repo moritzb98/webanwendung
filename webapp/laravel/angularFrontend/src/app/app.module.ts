@@ -24,6 +24,8 @@ import { InspirationComponent } from './inspiration/inspiration.component';
 import { KalenderComponent } from './kalender/kalender.component';
 import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.component';
 import { BilduploadComponent } from './bildupload/bildupload.component';
+import { ToDoComponent } from './to-do/to-do.component';
+import { ToDoOverviewComponent } from './to-do-overview/to-do-overview.component';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { BilduploadComponent } from './bildupload/bildupload.component';
     KalenderComponent,
     EigenesProfilComponent,
     BilduploadComponent,
+    ToDoComponent,
+    ToDoOverviewComponent,
   ],
   imports: [
     LayoutModule,
