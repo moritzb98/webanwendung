@@ -1,5 +1,4 @@
 import { AuthTokenService } from './../Services/auth-token.service';
-import { AuthService } from './../Services/auth.service';
 import { UserService } from './../Services/user.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,14 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EigenesProfilComponent implements OnInit {
   vorname = null;
+  profilePicture = '../../../../public/storage/laravel/';
+  standardPicture = 'martin-pechy.jpg';
+  
 
   constructor(private userService: UserService, private token: AuthTokenService) { }
 
   ngOnInit() {
     this.getVorname();
+    this.getProfilePicture();
   }
 
-  getVorname(){
+  getVorname() {
     this.vorname = this.token.getVorname();
+  }
+
+  getProfilePicture() {
+    const id = localStorage.getItem('id');
+    this.userService.getUploadedImage(id).subscribe(
+      data => {
+        this.standardPicture = data.image;
+        this.profilePicture += this.standardPicture;
+      }
+    );
   }
 }

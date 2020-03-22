@@ -40,4 +40,4 @@ Route::post('delEvents', 'EventController@delete');
 
 Route::post('/pimg/id', 'ImageController@index');
 Route::post('pimg', 'ImageController@store');
-Route::get('pimg', 'ImageController@show');
+Route::get('getpimg/{id}', 'ImageController@show');
