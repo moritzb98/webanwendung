@@ -19,7 +19,7 @@ export class EventsComponent implements OnInit {
   getEvents() {
     const eventsData = this.eventService.getEvents().subscribe(
       data => {
-        this.cards = data.events;
+       /* this.cards = data.events;*/
       },
       err => {
         console.log(err);
