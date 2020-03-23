@@ -19,6 +19,7 @@ export class BilduploadComponent implements OnInit {
     this.uploadService.uploadImage(this.selectedImage).subscribe(
       data => {
         console.log(data);
+        this.router.navigateByUrl('meinProfil');
       }
     );
   }
