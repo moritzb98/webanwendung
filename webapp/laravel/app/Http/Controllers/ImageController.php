@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\UserController;
 use App\User;
 use App\Http\Controllers\AuthController;
+use File;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -53,15 +55,18 @@ class ImageController extends Controller
 
     }}
 
+   
     /**
      * Display the specified resource.
      *
      * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show ($id)
     {
-        return response()->json($response, 200);
+        $image = User::where('id', $id)->first('image');
+        return response()->json($image, 200);
     }
 
     /**

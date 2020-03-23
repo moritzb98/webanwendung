@@ -24,12 +24,17 @@ import { InspirationComponent } from './inspiration/inspiration.component';
 import { KalenderComponent } from './kalender/kalender.component';
 import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.component';
 import { BilduploadComponent } from './bildupload/bildupload.component';
+<<<<<<< HEAD
 import { CommonModule } from '@angular/common';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
+=======
+import { ToDoComponent } from './to-do/to-do.component';
+import { ToDoOverviewComponent } from './to-do-overview/to-do-overview.component';
+>>>>>>> laradock
 
 
 @NgModule({
@@ -48,6 +53,8 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     KalenderComponent,
     EigenesProfilComponent,
     BilduploadComponent,
+    ToDoComponent,
+    ToDoOverviewComponent,
   ],
   imports: [
     LayoutModule,

@@ -1,7 +1,7 @@
 <div class="row">
     <div style="text-align: center;" class="col-4">
         <div class="circular--portrait abstandunten">
-            <img src="../../assets/img/Profilbild/martin-pechy.jpg" alt="Me">
+            <img [src]="profilePicture" alt="Me">
         </div>
         <!-- Button outlined dark -->
         <button [routerLink]="['/bildupload']" class="mdc-button mdc-button--outlined dark">
@@ -11,7 +11,7 @@
     <div class="col-8">
         <div class="row">
             <div class="col-6">
-                <h2>{{vorname}}</h2>
+                <h2>{{vorname}}</h2> 
             </div>
             <div style="text-align: right;" class="col-6">
                 <img src="../../assets/icon/edit.svg" style="height: 2em;">

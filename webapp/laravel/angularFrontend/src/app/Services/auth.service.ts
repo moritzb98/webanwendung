@@ -15,10 +15,9 @@ export class AuthService {
 
   login(data) {
     this.http.post('http://localhost/api/login', data).subscribe(
-      // tslint:disable-next-line:no-shadowed-variable
-      data => {
-        this.token.setUser(data.user);
-        this.token.setUserId(data.user);
+     data => {
+       this.token.setUser(data.user);
+        this.token.setUserId(data.userID);
       },
       err => {
         console.log(err);
