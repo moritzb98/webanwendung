@@ -8,11 +8,12 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUserData() {
-    return this.http.get('http://localhost/api/me');
+  getUserData(id) {
+    return this.http.get('http://localhost/api/getuserdata/' + id);
   }
 
   getUploadedImage(id) {
     return this.http.get('http://localhost/api/getpimg/' + id);
   }
+
 }

@@ -1,7 +1,10 @@
 <div class="row">
     <div style="text-align: center;" class="col-4">
-        <div class="circular--portrait abstandunten">
+        <div *ngIf="profilePicture != 'http://localhost/img/null'" class="circular--portrait abstandunten">
             <img [src]="profilePicture" alt="Me">
+        </div>
+        <div *ngIf="profilePicture == 'http://localhost/img/null'" class="circular--portrait abstandunten">
+            <img [src]="standard" alt="Me">
         </div>
         <!-- Button outlined dark -->
         <button [routerLink]="['/bildupload']" class="mdc-button mdc-button--outlined dark">
@@ -11,7 +14,7 @@
     <div class="col-8">
         <div class="row">
             <div class="col-6">
-                <h2>{{vorname}}</h2> 
+                <h2>{{vorname}} {{nachname}}</h2> 
             </div>
             <div style="text-align: right;" class="col-6">
                 <img src="../../assets/icon/edit.svg" style="height: 2em;">
@@ -24,7 +27,7 @@
                 <span>Alter:</span>
             </div>
             <div class="col-10">
-                <span>23</span>
+                <span>{{alter}}</span>
             </div>
         </div>
 
@@ -33,7 +36,7 @@
                 <span>Wohnort:</span>
             </div>
             <div class="col-10">
-                <span>Stuttgart</span>
+                <span>{{wohnort}}</span>
             </div>
         </div>
 
