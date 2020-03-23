@@ -66,10 +66,10 @@
                 </div>
             </div>
             <div class="col-3">
-                <div class="mittigWenigAbstand">
+                <div class="mittig">
                     <span class="schriftGrau">Pictures</span>
                 </div>
-                <div class="mittigWenigAbstand">
+                <div class="mittig">
                     <span class="großerText">14</span>
                 </div>
             </div>
@@ -77,16 +77,10 @@
     </div>
 
 </div>
-<div style="margin-top: 2em;" class="row">
-    <div class="col-4 mittig">
-        <h2 class="ügold">
-            Letzte Events
-        </h2>
+
+<div class="frame" style="display: flex; overflow: scroll; margin-top: 5em; margin-left: 3.5em;">
+    <div *ngFor="let card of cards; let i = index;" style="margin-right: 2em; height: 30em;">
+        <app-card cardTitle="{{card.title}}" subtitle="{{card.subtitle}}" datum="{{card.date}}" content="{{card.description}}"></app-card>
     </div>
 </div>
 
-<div class="row">
-<!-- Karten -->
-<app-card cardTitle="Sommerfest 2020" subtitle="Mosbacher Brauhaus" datum="29/04/2020" content="Lorem ipsum Lorem ipsumLorem Lorem ipsum Lorem ipsumLorem Lorem ipsumLorem" imgurl="https://www.fotomagazin.de/sites/www.fotomagazin.de/files/styles/landing_lead_mobile/public/fm/2019/aufmacher_fotowettbewerb_haida_landschaft.jpg?itok=yk9rEzGY&timestamp=1562245157"></app-card>
-
-</div>

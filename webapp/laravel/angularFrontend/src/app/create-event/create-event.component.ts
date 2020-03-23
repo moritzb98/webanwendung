@@ -15,6 +15,7 @@ export class CreateEventComponent implements OnInit {
     subtitle: null,
     date: null,
     description: null,
+    userID: null,
   };
 
   error: null;
@@ -25,6 +26,7 @@ export class CreateEventComponent implements OnInit {
   }
 
   onSubmit() {
+    this.form.userID = localStorage.getItem('id');
     this.eventService.createEvent(this.form).subscribe(
       data => this.handleResponse(data),
       error => this.handleError(error)
@@ -32,6 +34,7 @@ export class CreateEventComponent implements OnInit {
   }
 
   handleResponse(data) {
+    console.log(data);
     this.router.navigateByUrl('events');
   }
 

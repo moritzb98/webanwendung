@@ -1,3 +1,4 @@
+import { EventService } from './../Services/event.service';
 import { AuthTokenService } from './../Services/auth-token.service';
 import { UserService } from './../Services/user.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,13 +16,15 @@ export class EigenesProfilComponent implements OnInit {
   profilePicture = '';
   id = localStorage.getItem('id');
   standard = '../../assets/img/Profilbild/no_profile_image.jpg';
+  public cards: any = [];
 
-  constructor(private userService: UserService, private token: AuthTokenService) { }
+  constructor(private userService: UserService, private token: AuthTokenService, private eventService: EventService) { }
 
   ngOnInit() {
     this.getVorname();
     this.getData();
     this.getProfilePicture();
+    this.getEvents();
   }
 
   getData() {
@@ -42,6 +45,17 @@ export class EigenesProfilComponent implements OnInit {
     this.userService.getUploadedImage(this.id).subscribe(
       data => {
         this.profilePicture = 'http://localhost/img/' + data.image;
+      }
+    );
+  }
+
+  getEvents() {
+    const eventsData = this.eventService.getUserEvents(this.id).subscribe(
+      data => {
+        this.cards = data;
+      },
+      err => {
+        console.log(err);
       }
     );
   }

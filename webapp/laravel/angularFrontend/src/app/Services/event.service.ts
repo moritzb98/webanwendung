@@ -19,4 +19,8 @@ export class EventService {
   deleteEvent(id) {
     return this.http.post('http://localhost/api/delEvents', id);
   }
+
+  getUserEvents(id) {
+    return this.http.get('http://localhost/api/events/' + id);
+  }
 }

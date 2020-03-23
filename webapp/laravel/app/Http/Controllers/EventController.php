@@ -48,11 +48,7 @@ class EventController extends Controller
     public function show()
     {
         $events = Event::all();
-        $response = [
-            'events' => $events
-        ];
-
-        return response()->json($response, 200);
+        return response()->json($events, 200);
     }
 
     /**
@@ -92,6 +88,12 @@ class EventController extends Controller
     public function delete(Request $request) {
         Event::where('id', $request[0])->delete();
         return response()->json($request, 200);
+    }
+
+    
+    public function showUserEvents($id) {
+        $events = Event::where('userID', $id)->get();
+        return response()->json($events, 200);
     }
 
 }
