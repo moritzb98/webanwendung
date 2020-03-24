@@ -36,14 +36,25 @@ class UserController extends Controller
      */
     public function show ($id)
     {
+        $name = User::where('id', $id)->first('name');
         $surname = User::where('id', $id)->first('surname');
         $alter = User::where('id', $id)->first('alter');
         $wohnort = User::where('id', $id)->first('wohnort');
         $data = [
+            'name' => $name,
             'surname' => $surname,
             'alter' => $alter,
             'wohnort' => $wohnort
         ];
         return response()->json($data, 200);
+    }
+
+    public function update (Request $request){
+        $user = User::where('id', $request->userID);
+        $user->update((['name' => $request->name]));
+        $user->update((['surname' => $request->surname]));
+        $user->update((['alter' => $request->alter]));
+        $user->update((['wohnort' => $request->wohnort]));
+        return response()->json($request, 200);
     }
 }

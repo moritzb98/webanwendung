@@ -13,31 +13,54 @@
     </div>
     <div class="col-8">
         <div class="row">
-            <div class="col-6">
-                <h2>{{vorname}} {{nachname}}</h2> 
+            <div class="col-9">
+                <h3>Profil bearbeiten</h3>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Vorname</mat-label>
+                      <input matInput placeholder="{{vorname}}" value="{{vorname}}" type="text" name="name" id="inputName" [(ngModel)]="form.name">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" style="margin-left: 3em;">
+                      <mat-label>Nachname</mat-label>
+                      <input matInput placeholder="{{nachname}}" value="" type="text" name="name" id="inputSurname" [(ngModel)]="form.surname">
+                    </mat-form-field>
+                  </form>
             </div>
-            <div style="text-align: right;" class="col-6">
-                <img [routerLink]="['/editProfile']" src="../../assets/icon/edit.svg" style="height: 2em; cursor:pointer">
-            </div>
-
-
+            <!-- <div style="text-align: right;" class="col-3">
+                <img src="../../assets/icon/edit.svg" style="height: 2em;">
+            </div> -->
+            
         </div>
         <div class="row">
             <div class="col-2">
                 <span>Alter:</span>
             </div>
             <div class="col-10">
-                <span>{{alter}}</span>
+                <mat-form-field class="example-full-width" style="margin-top: -4em;">
+                    <mat-label></mat-label>
+                    <input matInput value="{{alter}}" type="number" name="alter" id="inputAlter" [(ngModel)]="form.alter">
+                  </mat-form-field>
             </div>
         </div>
 
-        <div class="row" style="margin-bottom: 6em;">
+        <div class="row">
             <div class="col-2">
                 <span>Wohnort:</span>
             </div>
             <div class="col-10">
-                <span>{{wohnort}}</span>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" style="margin-top: -4em;">
+                      <mat-label></mat-label>
+                      <input matInput placeholder="" value="{{wohnort}}" type="text" name="wohnort" id="inputWohnort" [(ngModel)]="form.wohnort">
+                    </mat-form-field>
+                  </form>
             </div>
+        </div>
+
+        <div class="col-sm-12" style="margin-bottom: 3em; padding: 0px;">
+            <button (click)="save()" class="mdc-button mdc-button--raised beige">
+                <span class="mdc-button__label beigeInput">Speichern</span>
+            </button>
         </div>
 
         <div class="row">

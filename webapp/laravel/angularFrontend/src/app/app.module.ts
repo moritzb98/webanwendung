@@ -25,6 +25,7 @@ import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.componen
 import { BilduploadComponent } from './bildupload/bildupload.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { ToDoOverviewComponent } from './to-do-overview/to-do-overview.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { ToDoOverviewComponent } from './to-do-overview/to-do-overview.component
     BilduploadComponent,
     ToDoComponent,
     ToDoOverviewComponent,
+    EditProfileComponent,
   ],
   imports: [
     LayoutModule,

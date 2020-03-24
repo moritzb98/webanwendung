@@ -15,6 +15,7 @@ import { AfterLoginService } from './Services/after-login.service';
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { ToDoOverviewComponent } from './to-do-overview/to-do-overview.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,11 @@ const routes: Routes = [
   path: 'meinProfil',
   component: EigenesProfilComponent,
   canActivate: [AfterLoginService]
+  },
+  {
+    path: 'editProfile',
+    component: EditProfileComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'bildupload',

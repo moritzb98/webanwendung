@@ -18,10 +18,10 @@ export class EigenesProfilComponent implements OnInit {
   standard = '../../assets/img/Profilbild/no_profile_image.jpg';
   public cards: any = [];
 
-  constructor(private userService: UserService, private token: AuthTokenService, private eventService: EventService) { }
+  constructor(private userService: UserService, private token: AuthTokenService, private eventService: EventService) {
+  }
 
   ngOnInit() {
-    this.getVorname();
     this.getData();
     this.getProfilePicture();
     this.getEvents();
@@ -30,15 +30,12 @@ export class EigenesProfilComponent implements OnInit {
   getData() {
     this.userService.getUserData(this.id).subscribe(
       data => {
+        this.vorname = data.name.name;
         this.nachname = data.surname.surname;
         this.alter = data.alter.alter;
         this.wohnort = data.wohnort.wohnort;
       }
     );
-  }
-
-  getVorname() {
-    this.vorname = this.token.getVorname();
   }
 
   getProfilePicture() {

@@ -16,4 +16,8 @@ export class UserService {
     return this.http.get('http://localhost/api/getpimg/' + id);
   }
 
+  updateData(data) {
+    return this.http.post('http://localhost/api/updateProfile', data);
+  }
+
 }
