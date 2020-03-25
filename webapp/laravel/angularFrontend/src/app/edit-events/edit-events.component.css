@@ -1,0 +1,9 @@
+button {
+    margin: 10px;
+}
+
+.loginScreen {
+    width: 100%;
+    border: 5px solid #B7A58A;
+    border-radius: 1em;
+}

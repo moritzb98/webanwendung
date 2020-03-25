@@ -6,7 +6,8 @@
 </div>
 <div class="frame" style="display: flex; overflow: scroll;">
     <div *ngFor="let card of cards; let i = index;" style="margin-right: 2em; height: 30em;">
-        <p (click)="delete(this.cards[i].id, i)" style="cursor: pointer;">löschen</p>
+        <span (click)="delete(this.cards[i].id, i)" style="cursor: pointer;">löschen</span>
+        <span [routerLink]="['/editEvents']" style="cursor: pointer; margin-left: 1em;">Bearbeiten</span>
         <app-card cardTitle="{{card.title}}" subtitle="{{card.subtitle}}" datum="{{card.date}}" content="{{card.description}}"></app-card>
     </div>
 </div>

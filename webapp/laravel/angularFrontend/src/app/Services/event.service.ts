@@ -23,4 +23,8 @@ export class EventService {
   getUserEvents(id) {
     return this.http.get('http://localhost/api/events/' + id);
   }
+
+  editEvents(id) {
+    //
+  }
 }

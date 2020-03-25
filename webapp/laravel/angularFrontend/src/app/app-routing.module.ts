@@ -1,3 +1,4 @@
+import { EditEventsComponent } from './edit-events/edit-events.component';
 import { KalenderComponent } from './kalender/kalender.component';
 import { BilduploadComponent } from './bildupload/bildupload.component';
 import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.component';
@@ -45,6 +46,11 @@ const routes: Routes = [
   {
     path: 'events',
     component: EventsComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'editEvents',
+    component: EditEventsComponent,
     canActivate: [AfterLoginService]
   },
   {

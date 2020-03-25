@@ -37,5 +37,4 @@ export class EventsComponent implements OnInit {
     );
     this.cards.splice(index, 1);
   }
-
 }
