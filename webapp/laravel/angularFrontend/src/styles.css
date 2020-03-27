@@ -99,6 +99,10 @@ app-eigenes-profil {
   width: 100% !important;
 }
 
+app-edit-profile {
+  width: 100% !important;
+}
+
 .mat-list-item-content{
   padding: 0px !important;
 }
@@ -118,4 +122,8 @@ app-eigenes-profil {
 .frame::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: #B7A58A;
+}
+
+textarea {
+  color: #F5F0ED !important;
 }

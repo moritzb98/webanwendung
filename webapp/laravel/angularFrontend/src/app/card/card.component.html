@@ -8,11 +8,11 @@
         <span style="color: #808080;">{{ datum }}</span>
         <p style="font-size: 13px; margin-bottom: -5px; color: #808080;">{{ content }}</p>
       </div>
-      <div class="mdc-card__actions" style="padding: 0px; margin-top: 10px;">
+      <div class="mdc-card__actions" style="padding: 0px; margin-top: 10px; position: absolute; bottom: 0.5em;">
         <div class="mdc-card__action-buttons">
           <button class="mdc-button mdc-card__action mdc-card__action--button mdc-button--raised beige">
             <div class="mdc-button__ripple"></div>
-              <span class="mdc-button__label beigeInput">Mehr Infos</span>
+              <span (click)="moreInfo()" class="mdc-button__label beigeInput">Mehr Infos</span>
           </button>
         </div>
         <div class="mdc-card__action-icons">

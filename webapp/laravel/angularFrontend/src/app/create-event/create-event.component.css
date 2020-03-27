@@ -7,3 +7,7 @@ button {
     border: 5px solid #B7A58A;
     border-radius: 1em;
 }
+
+.test {
+    width: 100% !important;
+}

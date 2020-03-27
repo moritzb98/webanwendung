@@ -23,11 +23,13 @@ export class EditEventsComponent implements OnInit {
   constructor(private eventService: EventService, private router: Router) { }
 
   ngOnInit() {
+    this.getEvent();
   }
 
   onSubmit() {
     this.form.userID = localStorage.getItem('id');
-    this.eventService.createEvent(this.form).subscribe(
+    const eventID = localStorage.getItem('dbEventID');
+    this.eventService.editEvent(eventID, this.form).subscribe(
       data => this.handleResponse(data),
       error => this.handleError(error)
     );
@@ -45,6 +47,20 @@ export class EditEventsComponent implements OnInit {
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
     const date = new Date(`${event.value}`);
     this.form.date = date.getDate() + '/' + (date.getMonth() + 1 ) + '/' + date.getFullYear();
+  }
+
+  getEvent() {
+    const eventData = this.eventService.getEvents().subscribe(
+      data => {
+        this.form.title = data[localStorage.getItem('eventID')].title;
+        this.form.subtitle = data[localStorage.getItem('eventID')].subtitle;
+        this.form.date = data[localStorage.getItem('eventID')].date;
+        this.form.description = data[localStorage.getItem('eventID')].description;
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
 }

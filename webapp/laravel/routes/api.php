@@ -40,6 +40,7 @@ Route::post('createEvent', 'EventController@create');
 Route::get('events', 'EventController@show');
 Route::get('events/{id}', 'EventController@showUserEvents');
 Route::post('delEvents', 'EventController@delete');
+Route::post('events/update/{id}', 'EventController@update');
 
 Route::post('/pimg/id', 'ImageController@index');
 Route::post('pimg', 'ImageController@store');

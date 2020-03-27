@@ -26,4 +26,8 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
+  moreInfo() {
+    console.log('Hier könnten mehr Infos stehen.');
+  }
+
 }

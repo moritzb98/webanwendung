@@ -37,4 +37,9 @@ export class EventsComponent implements OnInit {
     );
     this.cards.splice(index, 1);
   }
+
+  edit(id, index) {
+    localStorage.setItem('dbEventID', id);
+    localStorage.setItem('eventID', index);
+  }
 }

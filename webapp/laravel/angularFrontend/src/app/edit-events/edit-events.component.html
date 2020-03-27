@@ -1,4 +1,4 @@
-<h1 style="margin-right: 100x;">Veranstaltung bearbeiten</h1>
+<h1 style="margin-bottom: 1em; text-align: center;">Veranstaltung bearbeiten</h1>
 
 <div class="row">
     <div class="col-6">
@@ -6,27 +6,26 @@
     </div>
 
   <!-- Titel eingeben-->
-<form class="createEventForm" #createEventForm=ngForm (ngSubmit)="onSubmit()">
+<form class="createEventForm" #createEventForm=ngForm (ngSubmit)="onSubmit()" style="width: 50%">
   <h3 style="margin-top: 20px;">Titel</h3>
   <form class="example-form">
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width" style="width: 80%;">
       <mat-label>Titel</mat-label>
-      <input matInput placeholder="Titel der Veranstaltung" value="" type="text" name="titel" id="inputTitel" [(ngModel)]="form.title" required>
+      <input matInput type="text" name="titel" id="inputTitel" [(ngModel)]="form.title" required>
     </mat-form-field>
   </form>
     <!-- Subtitel eingeben-->
   <h3 style="margin-top: 20px;">Subtitel</h3>
   <form class="example-form">
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width" style="width: 80%;">
       <mat-label>Subtitel</mat-label>
-      <input matInput placeholder="Subtitel der Veranstaltung" value="" type="text" name="subtitel" id="inputSubtitel" [(ngModel)]="form.subtitle" required>
+      <input matInput type="text" name="subtitel" id="inputSubtitel" [(ngModel)]="form.subtitle" required>
     </mat-form-field>
   </form>
 
 
-
   <!-- Input für Datum -->
-  <mat-form-field>
+  <mat-form-field style="width: 80%;">
     <h3 style="margin-top: 20px;">Datum</h3>
     <mat-label>Wähle eine Datum</mat-label>
     <input matInput [matDatepicker]="dp3" (dateInput)="addEvent('input', $event)" disabled>
@@ -37,13 +36,13 @@
     <!-- Textfeld Beschreibung eingeben-->
     <h3 style="margin-top: 20px;">Beschreibung</h3>
   <form class="example-form">
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width" style="width: 80%;">
       <mat-label>Beschreibung</mat-label>
-      <input matInput placeholder="Beschreibung" value="" type="text" name="descritption" id="inputDescription" [(ngModel)]="form.description" required>
+      <textarea matInput value="" [maxLength]="90" type="text" name="descritption" id="inputDescription" [(ngModel)]="form.description" required></textarea>
     </mat-form-field>
   </form>
 
   <button style="margin-left: 20px" type="submit" class="mdc-button mdc-button--raised beige">
-    <span class="mdc-button__label beigeInput">Erstellen</span>
+    <span class="mdc-button__label beigeInput">Speichern</span>
   </button>
 </form>
