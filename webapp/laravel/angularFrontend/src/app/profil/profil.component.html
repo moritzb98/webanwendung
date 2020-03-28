@@ -6,10 +6,7 @@
         <div *ngIf="profilePicture == 'http://localhost/img/null'" class="circular--portrait abstandunten">
             <img [src]="standard" alt="Me">
         </div>
-        <!-- Button outlined dark -->
-        <button [routerLink]="['/bildupload']" class="mdc-button mdc-button--outlined dark">
-            <span class="mdc-button__label darkInput">Profilbild ändern</span>
-        </button>
+
     </div>
     <div class="col-8">
         <div class="row">
@@ -17,7 +14,15 @@
                 <h2>{{vorname}} {{nachname}}</h2> 
             </div>
             <div style="text-align: right;" class="col-6">
-                <img [routerLink]="['/editProfile']" src="../../assets/icon/edit.svg" style="height: 2em; cursor:pointer">
+                <!-- Button beige -->
+                <button style="margin-left: 0px; width: 12em" type="submit" class="mdc-button mdc-button--raised beige">
+                    <span class="mdc-button__label beigeInput">Folgen</span>
+                </button>
+                <br>
+                <!-- Button light -->
+                <button style= "margin-top: 0.25em; width: 12em" type="submit" class="mdc-button mdc-button--raised light">
+                    <span class="mdc-button__label lightInput">Nachricht senden</span>
+                </button>
             </div>
 
 
