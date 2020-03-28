@@ -1,3 +1,4 @@
+import { ProfilComponent } from './profil/profil.component';
 import { EditEventsComponent } from './edit-events/edit-events.component';
 import { KalenderComponent } from './kalender/kalender.component';
 import { BilduploadComponent } from './bildupload/bildupload.component';
@@ -88,6 +89,11 @@ const routes: Routes = [
   {
     path: 'ToDoOverview',
     component: ToDoOverviewComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'profil',
+    component: ProfilComponent,
     canActivate: [AfterLoginService]
   },
 ];

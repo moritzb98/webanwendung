@@ -1,0 +1,86 @@
+<div class="row">
+    <div style="text-align: center;" class="col-4">
+        <div *ngIf="profilePicture != 'http://localhost/img/null'" class="circular--portrait abstandunten">
+            <img [src]="profilePicture" alt="Me">
+        </div>
+        <div *ngIf="profilePicture == 'http://localhost/img/null'" class="circular--portrait abstandunten">
+            <img [src]="standard" alt="Me">
+        </div>
+        <!-- Button outlined dark -->
+        <button [routerLink]="['/bildupload']" class="mdc-button mdc-button--outlined dark">
+            <span class="mdc-button__label darkInput">Profilbild ändern</span>
+        </button>
+    </div>
+    <div class="col-8">
+        <div class="row">
+            <div class="col-6">
+                <h2>{{vorname}} {{nachname}}</h2> 
+            </div>
+            <div style="text-align: right;" class="col-6">
+                <img [routerLink]="['/editProfile']" src="../../assets/icon/edit.svg" style="height: 2em; cursor:pointer">
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <span>Alter:</span>
+            </div>
+            <div class="col-10">
+                <span>{{alter}}</span>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 6em;">
+            <div class="col-2">
+                <span>Wohnort:</span>
+            </div>
+            <div class="col-10">
+                <span>{{wohnort}}</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="mittig">
+                    <span class="schriftGrau">Followers</span>
+                </div>
+                <div class="mittigWenigAbstand">
+                    <span class="großerText">40</span>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mittig">
+                    <span class="schriftGrau">Followings</span>
+                </div>
+                <div class="mittigWenigAbstand">
+                    <span class="großerText">54</span>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mittig">
+                    <span class="schriftGrau">Events</span>
+                </div>
+                <div class="mittigWenigAbstand">
+                    <span class="großerText">32</span>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mittig">
+                    <span class="schriftGrau">Pictures</span>
+                </div>
+                <div class="mittigWenigAbstand">
+                    <span class="großerText">14</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="frame" style="display: flex; overflow: scroll; margin-top: 5em; margin-left: 3.5em;">
+    <div *ngFor="let card of cards; let i = index;" style="margin-right: 2em; height: 30em;">
+        <app-card cardTitle="{{card.title}}" subtitle="{{card.subtitle}}" datum="{{card.date}}" content="{{card.description}}"></app-card>
+    </div>
+</div>
+

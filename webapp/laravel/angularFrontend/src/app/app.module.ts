@@ -27,6 +27,7 @@ import { ToDoComponent } from './to-do/to-do.component';
 import { ToDoOverviewComponent } from './to-do-overview/to-do-overview.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { EditEventsComponent } from './edit-events/edit-events.component';
+import { ProfilComponent } from './profil/profil.component';
 
 
 
@@ -49,6 +50,7 @@ import { EditEventsComponent } from './edit-events/edit-events.component';
     ToDoOverviewComponent,
     EditProfileComponent,
     EditEventsComponent,
+    ProfilComponent,
   ],
   imports: [
     LayoutModule,
