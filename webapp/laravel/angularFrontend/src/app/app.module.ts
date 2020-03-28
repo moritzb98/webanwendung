@@ -29,6 +29,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { EditEventsComponent } from './edit-events/edit-events.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
