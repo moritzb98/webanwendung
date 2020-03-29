@@ -166,12 +166,11 @@
                 <br/>
                 <br/>
                 <h3>Meine Kontakte</h3>
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <p>Max Mustermann</p>
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <p>Wolfgang Amadeus</p>
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <p>Katy Perry</p>
+                <div class="contacts" *ngFor="let user of users; let i = index;">
+                  <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
+                  <span [routerLink]="['/profil']" (click)="getUser(this.users[i].id)" style="cursor: pointer; margin-left: 1em;">{{user.name}}</span>
+                </div>
+                
                 <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
                 <button style="margin-left: 40px" type="submit" class="mdc-button mdc-button--raised beige">
                     <span class="mdc-button__label beigeInput">Kontakte bearbeiten</span>

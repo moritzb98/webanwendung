@@ -12,6 +12,10 @@ export class UserService {
     return this.http.get('http://localhost/api/getuserdata/' + id);
   }
 
+  getUsers() {
+    return this.http.get('http://localhost/api/getuserdata');
+  }
+
   getUploadedImage(id) {
     return this.http.get('http://localhost/api/getpimg/' + id);
   }

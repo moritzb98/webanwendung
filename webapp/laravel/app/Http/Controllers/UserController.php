@@ -49,6 +49,15 @@ class UserController extends Controller
         return response()->json($data, 200);
     }
 
+    public function showAll() {
+        $users = User::all();
+        $response = [
+            'users' => $users
+        ];
+
+        return response()->json($response, 200);
+    }
+
     public function update (Request $request){
         $user = User::where('id', $request->userID);
         $user->update((['name' => $request->name]));

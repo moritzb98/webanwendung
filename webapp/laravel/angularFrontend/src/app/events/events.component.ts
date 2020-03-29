@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  public cards = [];
+  public cards: any = [];
 
   constructor(private eventService: EventService) { }
 

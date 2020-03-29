@@ -28,7 +28,8 @@ export class ProfilComponent implements OnInit {
   }
 
   getData() {
-    this.userService.getUserData(this.id).subscribe(
+    const id = localStorage.getItem('userID');
+    this.userService.getUserData(id).subscribe(
       data => {
         this.vorname = data.name.name;
         this.nachname = data.surname.surname;
