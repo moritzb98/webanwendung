@@ -57,4 +57,10 @@ export class ProfilComponent implements OnInit {
       }
     );
   }
+
+myAlert() {
+  alert('Funktion noch nicht implementiert.');
+}
+
+
 }
