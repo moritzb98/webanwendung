@@ -78,6 +78,7 @@
 
 </div>
 
+<h3 style="margin-top: 2em; margin-bottom: -1.5em; margin-left: 1.8em;">Deine Veranstaltungen</h3>
 <div class="frame" style="display: flex; overflow: scroll; margin-top: 5em; margin-left: 3.5em;">
     <div *ngFor="let card of cards; let i = index;" style="margin-right: 2em; height: 30em;">
         <app-card cardTitle="{{card.title}}" subtitle="{{card.subtitle}}" datum="{{card.date}}" content="{{card.description}}"></app-card>
