@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ToDoOverviewComponent implements OnInit {
 
   todo = null;
-  todos = [];
+  todos: any = [];
+  todosAdded: any = [];
   private todoForm = {
     todoName: null,
     checked: null,
@@ -18,15 +19,15 @@ export class ToDoOverviewComponent implements OnInit {
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
+    this.getTodos();
   }
 
   addTodo() {
     this.todoForm.todoName = this.todo;
     this.todoForm.checked = false;
-    this.todos.push(this.todo);
     this.todoService.createTodo(this.todoForm).subscribe(
       data => {
-        console.log(data);
+        this.todosAdded.push(data.todoName);
       }
     );
     this.todo = null;
@@ -34,5 +35,16 @@ export class ToDoOverviewComponent implements OnInit {
 
   check() {
     console.log('check');
+  }
+
+  getTodos() {
+    const todoData = this.todoService.getTodos().subscribe(
+      data => {
+        this.todos = data;
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 }

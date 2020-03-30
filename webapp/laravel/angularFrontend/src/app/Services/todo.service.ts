@@ -11,4 +11,9 @@ export class TodoService {
   createTodo(data) {
     return this.http.post('http://localhost/api/createTodo', data);
   }
+
+  getTodos() {
+    const id = localStorage.getItem('id');
+    return this.http.get('http://localhost/api/todos/' + id);
+  }
 }

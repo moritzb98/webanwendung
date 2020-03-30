@@ -16,7 +16,12 @@
                         <h3>Offene To Dos</h3>
                         <div class="todos" *ngFor="let todo of todos; let i = index;">
                             <ul>
-                                <mat-checkbox (click)="check()">{{todo}}</mat-checkbox>
+                                <mat-checkbox (click)="check()">{{todo.todoName}}</mat-checkbox>
+                            </ul>
+                        </div>
+                        <div class="todos" *ngFor="let todo of todosAdded; let i = index;">
+                            <ul>
+                                <mat-checkbox (click)="check()">{{todosAdded}}</mat-checkbox>
                             </ul>
                         </div>
                         

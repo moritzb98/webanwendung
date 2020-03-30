@@ -12,4 +12,9 @@ class TodoController extends Controller
         Todo::create($request->all());
         return response()->json($request, 201);
     }
+
+    public function show($id) {
+        $name = Todo::where('userID', $id)->get();
+        return response()->json($name, 200);
+    }
 }
