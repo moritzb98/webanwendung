@@ -17,4 +17,9 @@ class TodoController extends Controller
         $name = Todo::where('userID', $id)->get();
         return response()->json($name, 200);
     }
+
+    public function delete(Request $request) {
+        $todo = Todo::where('id', $request[0])->delete();
+        return response()->json($request[0], 200);
+    }
 }

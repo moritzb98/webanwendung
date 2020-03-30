@@ -49,3 +49,4 @@ Route::get('getpimg/{id}', 'ImageController@show');
 
 Route::post('createTodo', 'TodoController@create');
 Route::get('todos/{id}', 'TodoController@show');
+Route::post('deleteTodo', 'TodoController@delete');

@@ -28,13 +28,22 @@ export class ToDoOverviewComponent implements OnInit {
     this.todoService.createTodo(this.todoForm).subscribe(
       data => {
         this.todosAdded.push(data.todoName);
+        this.todo = null;
+        location.reload();
       }
     );
-    this.todo = null;
   }
 
-  check() {
-    console.log('check');
+  check(id, index) {
+    this.todos[index].checked = true;
+    const checkTodo = this.todoService.delete(id).subscribe(
+      data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   getTodos() {
