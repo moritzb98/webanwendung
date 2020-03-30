@@ -46,3 +46,5 @@ Route::post('events/update/{id}', 'EventController@update');
 Route::post('/pimg/id', 'ImageController@index');
 Route::post('pimg', 'ImageController@store');
 Route::get('getpimg/{id}', 'ImageController@show');
+
+Route::post('createTodo', 'TodoController@create');
