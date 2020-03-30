@@ -48,72 +48,17 @@
                 <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
                 
                 <div class="container">
-                    <div class="row">
-                      <div class="col-1">
-                        <mat-checkbox></mat-checkbox>
-                      </div>
-                      <div class="col-9">
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                    </div>
-
-               
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <div class="row">
-                    <div class="col-1">
-                      <mat-checkbox></mat-checkbox>
-                    </div>
-                    <div class="col-9">
-                      <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                  </div>
-
-                  <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                  <div class="row">
-                      <div class="col-1">
-                        <mat-checkbox></mat-checkbox>
-                      </div>
-                      <div class="col-9">
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                    </div>
-
+                  <div class="todos" *ngFor="let todo of todos; let i = index;">
+                    <ul>
+                        <mat-checkbox (click)="check(todo.id, i)">{{todo.todoName}}</mat-checkbox>
+                    </ul>
                     <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                    <div class="row">
-                        <div class="col-1">
-                          <mat-checkbox></mat-checkbox>
-                        </div>
-                        <div class="col-9">
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                      </div>
-
-                      <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                      <div class="row">
-                          <div class="col-1">
-                            <mat-checkbox></mat-checkbox>
-                          </div>
-                          <div class="col-9">
-                            <p>Lorem ipsum dolor sit amet</p>
-                          </div>
-                        </div>
-                      
-                        <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                        <div class="row">
-                            <div class="col-1">
-                              <mat-checkbox></mat-checkbox>
-                            </div>
-                            <div class="col-9">
-                              <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                          </div>
-                          <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-
+                </div>
                           
-                    </div>
+                </div>
                
 
-                <button style="margin-left: 40px" type="submit" class="mdc-button mdc-button--raised beige">
+                <button style="margin-left: 40px" [routerLink]="['/ToDoOverview']" class="mdc-button mdc-button--raised beige">
                     <span class="mdc-button__label beigeInput">Aufgabe hinzufügen</span>
                   </button>
                   
@@ -134,11 +79,6 @@
                   <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
                   <span [routerLink]="['/profil']" (click)="getUser(this.users[i].id)" style="cursor: pointer; margin-left: 1em;">{{user.name}}</span>
                 </div>
-                
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <button style="margin-left: 40px" (click)="alert('Noch nicht implementiert.');" class="mdc-button mdc-button--raised beige">
-                    <span class="mdc-button__label beigeInput">Kontakte hinzufügen</span>
-                  </button>
                   
               </div>
             </div>
