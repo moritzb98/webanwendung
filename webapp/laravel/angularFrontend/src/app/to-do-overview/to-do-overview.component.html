@@ -28,7 +28,7 @@
                         <ul>
                             <form class="example-form">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Neues Todo" value="" type="text" name="todo" id="inputTodo" [(ngModel)]="todo">
+                                  <input matInput [maxLength]="60" placeholder="Neues Todo" value="" type="text" name="todo" id="inputTodo" [(ngModel)]="todo">
                                 </mat-form-field>
                               </form>
                         </ul>
