@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/users', 'UserController@getUser');
 Route::get('/currentUser', 'UserController@getCurrentUser');
 Route::get('getuserdata/{id}', 'UserController@show');
+Route::get('getuserdata', 'UserController@showAll');
 Route::post('updateProfile', 'UserController@update');
 
 Route::group([
@@ -45,3 +46,5 @@ Route::post('events/update/{id}', 'EventController@update');
 Route::post('/pimg/id', 'ImageController@index');
 Route::post('pimg', 'ImageController@store');
 Route::get('getpimg/{id}', 'ImageController@show');
+
+Route::post('createTodo', 'TodoController@create');

@@ -28,7 +28,8 @@ export class ProfilComponent implements OnInit {
   }
 
   getData() {
-    this.userService.getUserData(this.id).subscribe(
+    const id = localStorage.getItem('userID');
+    this.userService.getUserData(id).subscribe(
       data => {
         this.vorname = data.name.name;
         this.nachname = data.surname.surname;
@@ -39,7 +40,7 @@ export class ProfilComponent implements OnInit {
   }
 
   getProfilePicture() {
-    this.userService.getUploadedImage(this.id).subscribe(
+    this.userService.getUploadedImage(localStorage.getItem('userID')).subscribe(
       data => {
         this.profilePicture = 'http://localhost/img/' + data.image;
       }
@@ -47,7 +48,7 @@ export class ProfilComponent implements OnInit {
   }
 
   getEvents() {
-    const eventsData = this.eventService.getUserEvents(this.id).subscribe(
+    const eventsData = this.eventService.getUserEvents(localStorage.getItem('userID')).subscribe(
       data => {
         this.cards = data;
       },

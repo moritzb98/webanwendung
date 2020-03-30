@@ -1,3 +1,4 @@
+import { TodoService } from './../Services/todo.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToDoOverviewComponent implements OnInit {
 
-  constructor() { }
+  todo = null;
+  todos = [];
+  private todoForm = {
+    todoName: null,
+    checked: null,
+    userID: localStorage.getItem('id')
+  };
+  constructor(private todoService: TodoService) { }
 
   ngOnInit() {
   }
 
+  addTodo() {
+    this.todoForm.todoName = this.todo;
+    this.todoForm.checked = false;
+    this.todos.push(this.todo);
+    this.todoService.createTodo(this.todoForm).subscribe(
+      data => {
+        console.log(data);
+      }
+    );
+    this.todo = null;
+  }
+
+  check() {
+    console.log('check');
+  }
 }

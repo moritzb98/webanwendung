@@ -10,70 +10,38 @@
             <!-- Meine Veranstaltungen-->
         <div class="container">
             <div class="row">
-              <div class="col-md-4">
-                <h3>Kommende Veranstaltungen</h3>
+              <div class="col-md-4" style="background-color:black; border-color: #F5F0ED; border-radius: 0.5em;">
                 
+                <h3>Kommende Veranstaltungen</h3>
                 <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-
-                <!--1. Veranstaltung-->
-                <div class="container">
+                
+                <div *ngFor="let event of events; let i = index;">
+                  <div class="container">
                     <div class="row">
                       <div class="col-5"><div class="circular--portraits">
-                        <img src="https://www.mch-group.com/-/media/mch-group/Images/Content/News/Blog/2017/2017-04/mch-group-live-marketing-aktivierung.jpg" />
+                        <img src="../../assets/img/no_image.jpg"/>
                     </div></div>
                       <div class="col-7"> <div class="informations-event">
-                        <h5>Sommerfest 2019</h5>
-                        <p>27-06-2020</p>
-                        <button style="margin-left: 0px" type="submit" class="mdc-button mdc-button--raised beige">
-                            <span class="mdc-button__label beigeInput">Mehr Infos</span>
-                          </button></div>
+                        <h5>{{event.title}}</h5>
+                        <p>{{event.date}}</p>
+                        <button type="submit" class="mdc-button mdc-button--raised light">
+                          <span class="mdc-button__label lightInput">Mehr Infos</span>
+                        </button></div>
                           </div>
                       </div>
                 </div>
                 <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-
-                   <!--2. Veranstaltung-->
-                   <div class="container">
-                    <div class="row">
-                      <div class="col-5"><div class="circular--portraits">
-                        <img src="https://www.mch-group.com/-/media/mch-group/Images/Content/News/Blog/2017/2017-04/mch-group-live-marketing-aktivierung.jpg" />
-                    </div></div>
-                      <div class="col-7"> <div class="informations-event">
-                        <h5>Sommerfest 2019</h5>
-                        <p>27-06-2020</p>
-                        <button style="margin-left: 0px" type="submit" class="mdc-button mdc-button--raised beige">
-                            <span class="mdc-button__label beigeInput">Mehr Infos</span>
-                          </button></div>
-                          </div>
-                      </div>
-                </div>
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-
-                 <!--3. Veranstaltung-->
-                 <div class="container">
-                    <div class="row">
-                      <div class="col-5"><div class="circular--portraits">
-                        <img src="https://www.mch-group.com/-/media/mch-group/Images/Content/News/Blog/2017/2017-04/mch-group-live-marketing-aktivierung.jpg" />
-                    </div></div>
-                      <div class="col-7"> <div class="informations-event">
-                        <h5>Sommerfest 2019</h5>
-                        <p>27-06-2020</p>
-                        <button style="margin-left: 0px" type="submit" class="mdc-button mdc-button--raised beige">
-                            <span class="mdc-button__label beigeInput">Mehr Infos</span>
-                          </button></div>
-                          </div>
-                      </div>
-                </div>
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
+              </div>
 
                 <!-- Button- Verantstaltungen hinzufügen-->
-                <button style="margin-left: 0px" type="submit" class="mdc-button mdc-button--raised beige">
+                <div style="text-align: center;">
+                  <button style="margin-bottom: 1em;" [routerLink]="['/createEvent']" class="mdc-button mdc-button--raised beige">
                     <span class="mdc-button__label beigeInput">Veranstaltung hinzufügen</span>
                   </button>
+                 </div>
+                
               </div>
               
-
-
               <!-- Meine To DOs-->
               <div class="col-md-4">
                 <h3>Meine TO DO´s</h3>
@@ -136,21 +104,23 @@
                               <mat-checkbox></mat-checkbox>
                             </div>
                             <div class="col-9">
-                              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                              <p>Lorem ipsum dolor sit amet</p>
                             </div>
                           </div>
+                          <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
 
                           
                     </div>
                
 
-                <button style="margin-left: 0px" type="submit" class="mdc-button mdc-button--raised beige">
+                <button style="margin-left: 40px" type="submit" class="mdc-button mdc-button--raised beige">
                     <span class="mdc-button__label beigeInput">Aufgabe hinzufügen</span>
                   </button>
                   
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4" style="background-color:black; border-color: #F5F0ED; border-radius: 0.5em;">
                 <h3>Kalender</h3>
+                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
                 <br/>
                 <br/>
                 <br/>
@@ -160,15 +130,14 @@
                 <br/>
                 <br/>
                 <h3>Meine Kontakte</h3>
+                <div class="contacts" *ngFor="let user of users; let i = index;">
+                  <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
+                  <span [routerLink]="['/profil']" (click)="getUser(this.users[i].id)" style="cursor: pointer; margin-left: 1em;">{{user.name}}</span>
+                </div>
+                
                 <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <p>Max Mustermann</p>
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <p>Wolfgang Amadeus</p>
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <p>Katy Perry</p>
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <button style="margin-left: 0px" type="submit" class="mdc-button mdc-button--raised beige">
-                    <span class="mdc-button__label beigeInput">Kontakte bearbeiten</span>
+                <button style="margin-left: 40px" (click)="alert('Noch nicht implementiert.');" class="mdc-button mdc-button--raised beige">
+                    <span class="mdc-button__label beigeInput">Kontakte hinzufügen</span>
                   </button>
                   
               </div>
@@ -180,13 +149,14 @@
           <br/>
           
 
-          <!-- Inpirationen-->
+          <!-- Inpirationen
           <div class="container">
             <div class="row">
               <div class="col-12">
-               <h3> Zu den Inspos</h3>>
+               <h3> Zu den Inspos</h3>
+              
               </div>
-
+        
               <div class="row">
                 <div class="container">
                     <div class="row">
@@ -220,8 +190,9 @@
                             <img src="https://www.mch-group.com/-/media/mch-group/Images/Content/News/Blog/2017/2017-04/mch-group-live-marketing-aktivierung.jpg" />
                         </div></div>
                       </div>
+                  
                                     
                 
-              </div>
+              </div>  -->
 
          
