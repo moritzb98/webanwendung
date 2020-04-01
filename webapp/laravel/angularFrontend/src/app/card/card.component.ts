@@ -30,4 +30,8 @@ export class CardComponent implements OnInit {
     console.log('Hier könnten mehr Infos stehen.');
   }
 
+  nextUpdate() {
+    alert('Diese Funktion wird erst beim nächsten Update implementiert.');
+  }
+
 }
