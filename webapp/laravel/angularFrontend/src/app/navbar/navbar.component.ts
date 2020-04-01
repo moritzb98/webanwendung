@@ -25,4 +25,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigateByUrl('/login');
   }
 
+  nextUpdate() {
+    alert('Diese Seite wird erst beim nächsten Update implementiert');
+  }
+
 }

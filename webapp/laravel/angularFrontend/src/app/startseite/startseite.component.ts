@@ -71,4 +71,8 @@ export class StartseiteComponent implements OnInit {
       }
     );
   }
+
+  nextUpdate() {
+    alert('Diese Funktion wird erst beim nächsten Update implementiert');
+  }
 }

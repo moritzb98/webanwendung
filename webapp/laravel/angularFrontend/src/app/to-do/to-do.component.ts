@@ -10,6 +10,7 @@ export class ToDoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    alert('Die Funktionen dieser Seite werden erst beim nächsten Update implementiert.');
   }
 
 }
