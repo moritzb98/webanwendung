@@ -19,7 +19,7 @@ export class StartseiteComponent implements OnInit {
   }
 
   getUsers() {
-    this.users = this.userService.getUsers().subscribe(
+    const userData = this.userService.getUsers().subscribe(
       data => {
         this.users = data.users;
       },
