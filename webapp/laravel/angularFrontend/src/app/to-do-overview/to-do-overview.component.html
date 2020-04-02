@@ -28,12 +28,10 @@
                         <ul>
                             <form class="example-form">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput [maxLength]="60" placeholder="Neues Todo" value="" type="text" name="todo" id="inputTodo" [(ngModel)]="todo">
+                                  <input matInput [maxLength]="35" placeholder="Neues Todo" value="" type="text" name="todo" id="inputTodo" [(ngModel)]="todo">
                                 </mat-form-field>
                               </form>
                         </ul>
-                        
-                
               </div>
              
 
@@ -89,13 +87,14 @@
                   </button>
                   
               </div>
-              <div class="col-md-4" > <!--Farbe anpassen Rand anpassen-->
+              <div class="col-md-4"> <!--Farbe anpassen Rand anpassen-->
                 <div class="col-sm"style="background-color: black; border-color: #F5F0ED; border-radius: 0.5em;">
                 <!--div style="background-color:#F5F0ED; border-radius: 0.5em; color:  #262625; border-color: #B7A58A; "></div>
                     <h3>Notizen</h3-->
                     
                       
                 <h3>Notizen</h3>
+                <textarea style="background-color: black; color: white; width: 100%"></textarea>
                 <p>Lorem Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et </p>
                 <br/>
                 
@@ -104,8 +103,8 @@
                 <br/>
             </div>
                 <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <button style="margin-left: 0px" type="submit" class="mdc-button mdc-button--raised beige">
-                    <span class="mdc-button__label beigeInput">Notizen bearbeiten</span>
+                <button style="margin-left: 0px" (click)="nextUpdate();" class="mdc-button mdc-button--raised beige">
+                    <span class="mdc-button__label beigeInput">Notizen speichern</span>
                   </button>
                   
               

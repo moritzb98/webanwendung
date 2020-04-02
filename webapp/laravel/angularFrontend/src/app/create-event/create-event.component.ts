@@ -39,7 +39,7 @@ export class CreateEventComponent implements OnInit {
   }
 
   handleError(error) {
-    this.error = error.error.error;
+    this.error = 'Du hast ein Feld nicht ausgefüllt. Fülle bitte alle Felder aus.';
   }
 
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
