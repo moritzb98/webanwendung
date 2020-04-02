@@ -1,6 +1,5 @@
 import { ProfilComponent } from './profil/profil.component';
 import { EditEventsComponent } from './edit-events/edit-events.component';
-import { KalenderComponent } from './kalender/kalender.component';
 import { BilduploadComponent } from './bildupload/bildupload.component';
 import { EigenesProfilComponent } from './eigenes-profil/eigenes-profil.component';
 import { InspirationComponent } from './inspiration/inspiration.component';
