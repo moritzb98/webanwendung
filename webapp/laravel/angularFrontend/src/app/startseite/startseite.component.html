@@ -24,7 +24,7 @@
                       <div class="col-7"> <div class="informations-event">
                         <h5>{{event.title}}</h5>
                         <p>{{event.date}}</p>
-                        <button type="submit" class="mdc-button mdc-button--raised light">
+                        <button (click)="nextUpdate()" type="submit" class="mdc-button mdc-button--raised light">
                           <span class="mdc-button__label lightInput">Mehr Infos</span>
                         </button></div>
                           </div>
@@ -48,97 +48,28 @@
                 <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
                 
                 <div class="container">
-                    <div class="row">
-                      <div class="col-1">
-                        <mat-checkbox></mat-checkbox>
-                      </div>
-                      <div class="col-9">
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                    </div>
-
-               
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <div class="row">
-                    <div class="col-1">
-                      <mat-checkbox></mat-checkbox>
-                    </div>
-                    <div class="col-9">
-                      <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                  </div>
-
-                  <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                  <div class="row">
-                      <div class="col-1">
-                        <mat-checkbox></mat-checkbox>
-                      </div>
-                      <div class="col-9">
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                    </div>
-
+                  <div class="todos" *ngFor="let todo of todos; let i = index;">
+                    <ul>
+                        <mat-checkbox (click)="check(todo.id, i)">{{todo.todoName}}</mat-checkbox>
+                    </ul>
                     <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                    <div class="row">
-                        <div class="col-1">
-                          <mat-checkbox></mat-checkbox>
-                        </div>
-                        <div class="col-9">
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                      </div>
-
-                      <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                      <div class="row">
-                          <div class="col-1">
-                            <mat-checkbox></mat-checkbox>
-                          </div>
-                          <div class="col-9">
-                            <p>Lorem ipsum dolor sit amet</p>
-                          </div>
-                        </div>
-                      
-                        <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                        <div class="row">
-                            <div class="col-1">
-                              <mat-checkbox></mat-checkbox>
-                            </div>
-                            <div class="col-9">
-                              <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                          </div>
-                          <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-
+                </div>
                           
-                    </div>
+                </div>
                
 
-                <button style="margin-left: 40px" type="submit" class="mdc-button mdc-button--raised beige">
+                <button style="margin-left: 40px" [routerLink]="['/ToDoOverview']" class="mdc-button mdc-button--raised beige">
                     <span class="mdc-button__label beigeInput">Aufgabe hinzufügen</span>
                   </button>
                   
               </div>
               <div class="col-md-4" style="background-color:black; border-color: #F5F0ED; border-radius: 0.5em;">
-                <h3>Kalender</h3>
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+              
                 <h3>Meine Kontakte</h3>
                 <div class="contacts" *ngFor="let user of users; let i = index;">
                   <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
                   <span [routerLink]="['/profil']" (click)="getUser(this.users[i].id)" style="cursor: pointer; margin-left: 1em;">{{user.name}}</span>
                 </div>
-                
-                <hr style="height: 1px; background-color: rgba(255, 255, 255, 0.12); border: none;"/>
-                <button style="margin-left: 40px" (click)="alert('Noch nicht implementiert.');" class="mdc-button mdc-button--raised beige">
-                    <span class="mdc-button__label beigeInput">Kontakte hinzufügen</span>
-                  </button>
                   
               </div>
             </div>

@@ -28,14 +28,16 @@ export class EventsComponent implements OnInit {
   }
 
   delete(eventId, index) {
-    const deleteE = this.eventService.deleteEvent(eventId).subscribe(
-      data => {
-      },
-      err => {
-        console.log(err);
-      }
-    );
-    this.cards.splice(index, 1);
+    if(confirm('Möchtest du das wirklich löschen?')) {
+      const deleteE = this.eventService.deleteEvent(eventId).subscribe(
+        data => {
+        },
+        err => {
+          console.log(err);
+        }
+      );
+      this.cards.splice(index, 1);
+    }
   }
 
   edit(id, index) {

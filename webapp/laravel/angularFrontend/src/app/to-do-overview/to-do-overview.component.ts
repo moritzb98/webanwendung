@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ToDoOverviewComponent implements OnInit {
 
   todo = null;
-  todos = [];
+  todos: any = [];
+  todosAdded: any = [];
   private todoForm = {
     todoName: null,
     checked: null,
@@ -18,21 +19,45 @@ export class ToDoOverviewComponent implements OnInit {
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
+    this.getTodos();
   }
 
   addTodo() {
     this.todoForm.todoName = this.todo;
     this.todoForm.checked = false;
-    this.todos.push(this.todo);
     this.todoService.createTodo(this.todoForm).subscribe(
       data => {
-        console.log(data);
+        this.todosAdded.push(data.todoName);
+        this.todo = null;
+        location.reload();
       }
     );
-    this.todo = null;
   }
 
-  check() {
-    console.log('check');
+  check(id, index) {
+    this.todos[index].checked = true;
+    const checkTodo = this.todoService.delete(id).subscribe(
+      data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
+  getTodos() {
+    const todoData = this.todoService.getTodos().subscribe(
+      data => {
+        this.todos = data;
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
+  nextUpdate() {
+    alert('Diese Funktion wird erst beim nächsten Update implementiert');
   }
 }
